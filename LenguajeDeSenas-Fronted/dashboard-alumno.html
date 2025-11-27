@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel Alumno</title>
+    <link rel="icon" type="image/png" href="assets/Favicon/Logo-LSA.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/alumno.css">
+</head>
+<body>
+
+    <button id="toggleMenu" class="menu-btn">☰</button>
+    <aside class="sidebar">
+        <h2 class="logo">Alumno</h2>
+        <nav>
+            <a href="dashboard-alumno.html" class="active">Panel</a>
+            <a href="dashboard-recursos.html">Recursos</a>
+            <a href="perfil.html">Mi Perfil</a>
+            <a href="index.html" class="nav-item">Volver al Inicio</a> 
+            <a href="index.html" id="logout">Cerrar Sesión</a>
+        </nav>
+    </aside>
+
+   
+    <main class="content">
+
+        <header>
+            <h1>Bienvenido/a</h1>
+            <p class="bienvenida">Explorá actividades, recursos educativos y seguí tu progreso.</p>
+        </header>
+
+       
+        <section class="cards">
+            <div class="card">
+                <h3>Progreso General</h3>
+                <p id="progresoGeneral">0%</p>
+            </div>
+
+            <div class="card">
+                <h3>Actividades Completadas</h3>
+                <p id="actividadesCompletadas">0</p>
+            </div>
+
+            <div class="card">
+                <h3>Última Actividad</h3>
+                <p id="ultimaActividad">N/A</p>
+            </div>
+        </section>
+
+       
+        <section id="progreso" class="progreso-section">
+            <h2>Mi Progreso</h2>
+
+            <div class="barra-progreso">
+                <div id="barra" class="barra"></div>
+            </div>
+        </section>
+
+      
+        <section id="actividades" class="actividades-section">
+            <h2>Actividades Disponibles</h2>
+
+          <div class="card-container">
+
+                <div class="actividad-card">
+                    <img src="assets/icons/GameIcon.jpg" alt= "Icono memoria" class="icono-actividad">
+                    <h3>Juego de Memoria</h3>
+                    <p>Encontrá los pares y aprendé divirtiéndote.</p>
+                    <a href="memoria.html">Jugar</a>
+                </div>
+
+                <div class="actividad-card">
+                    <img src="assets/icons/abc_8476167.png" alt="Icono abecedario" class="icono-actividad">
+                    <h3>Práctica del Abecedario</h3>
+                    <p>Aprendé el alfabeto en LSA de forma interactiva.</p>
+                    <a href="practica-alfabeto.html">Practicar</a>
+                </div>
+
+                <div class="actividad-card">
+                    <img src="assets/icons/video.jpg" alt="Icono señas básicas" class="icono-actividad">
+                    <h3>Señas Básicas</h3>
+                    <p>Vocabulario esencial para principiantes.</p>
+                    <a href="señas-basicas.html">Aprender</a>
+                </div>
+
+</div>
+
+        </section>
+
+    </main>
+
+    <script type="module">
+    import { verificarAcceso } from "./js/auth-guard.js";
+    verificarAcceso(["Alumno"]);
+</script>
+
+<script src="js/logout.js"></script>
+<script src="js/alumno.js" type="module"></script>
+
+</body>
+</html>

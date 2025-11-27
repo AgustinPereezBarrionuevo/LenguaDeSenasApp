@@ -1,0 +1,6 @@
+@ApiLenguajeDeSenas_HostAddress = http://localhost:5063
+
+GET {{ApiLenguajeDeSenas_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

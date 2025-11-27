@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrarse</title>
+    <link rel="icon" type="image/png" href="assets/Favicon/Logo-LSA.png">
+    <link rel="stylesheet" href="css/registro.css">
+</head>
+<body>
+
+    <div class="register-container">
+        <h2>Crear Cuenta</h2>
+
+        <form id="formRegistro">
+
+            <label>Nombre de usuario</label>
+            <input type="text" id="nombreUsuario" required>
+
+            <label>Email</label>
+            <input type="email" id="email" required>
+
+            <label>Contraseña</label>
+            <input type="password" id="password" required>
+
+            <label>Rol</label>
+            <select id="rol" required>
+                <option value="Alumno">Alumno</option>
+            </select>
+
+            <button type="submit">Registrarme</button>
+
+            <p id="mensaje"></p>
+
+            <div class="links">
+                <a href="login.html">¿Ya tenés cuenta? Iniciar sesión</a>
+                <a href="index.html">Volver al inicio</a>
+            </div>
+        </form>
+    </div>
+
+    <script src="js/registro.js"></script>
+</body>
+</html>

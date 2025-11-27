@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Plataforma de Lengua de Señas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+
+
+    <link rel="icon" type="image/png" href="assets/Favicon/logoLSAtransparentepequeño.PNG">
+    <link rel="stylesheet" href="Css/styles.css" />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header>
+      <div class="logo">
+        <img src="./assets/Favicon/logoLSAtransparentepequeño.PNG" alt="">
+      </div>
+      <nav>
+        <a href="#hero">Inicio</a>
+        <a href="#quienes">Quiénes Somos</a>
+        <a href="#objetivos">Objetivos</a>
+        <a href="#alumno">Para Alumnos</a>
+        <a href="#recursos">Recursos</a>
+
+        <a
+          id="btnPerfil"
+          class="btn-profile"
+          style="display: none; cursor: pointer"
+          >Mi Panel</a
+        >
+        <a href="login.html" id="btnLogin" class="btn-login">Iniciar Sesión</a>
+        <a href="registro.html" id="btnRegister" class="btn-register"
+          >Registrarse</a
+        >
+      </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero" id="hero">
+      <div class="hero-container">
+        <div class="hero-content">
+          <h1>
+            <span class="marker">Aprende</span> <br />
+            Lengua de <span class="marker">Señas</span>  Argentina
+          </h1>
+          <p>
+            Una plataforma educativa accesible para alumnos, docentes y
+            administradores.
+          </p>
+          <a href="registro.html" class="btn-primary">Comenzar Ahora</a>
+        </div>
+        <div class="hero-imagen">
+          <img
+            src="./assets/background/imagenlenguadeseniasirregulartransparente.png"
+            alt="Ilustración LSA"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- QUIÉNES SOMOS -->
+    <section id="quienes" class="info bg-white">
+      <div class="quienes-container">
+        <div class="quienes-img">
+          <img src="./assets/background/3personas.jpg" alt="" />
+        </div>
+        <div class="quienes-texto">
+          <h2>¿Quiénes Somos?</h2>
+          <p>
+            Somos una plataforma educativa desarrollada para facilitar el
+            aprendizaje de la Lengua de Señas Argentina. Nuestro objetivo es
+            brindar recursos accesibles para alumnos, docentes y cualquier
+            persona interesada en aprender este lenguaje visual y gestual tan
+            importante para la comunidad sorda.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- OBJETIVOS -->
+    <!-- <section id="objetivos" class="info bg-celeste-claro">
+      <h2>Nuestro Objetivo</h2>
+      <p>
+        Buscamos promover la inclusión y el acceso a la comunicación mediante
+        una herramienta moderna, intuitiva y completa. Aquí podrás aprender
+        desde cero, practicar con material audiovisual y evaluar tu progreso con
+        actividades interactivas.
+      </p>
+    </section> -->
+    <section id="objetivos" class="objetivos-section">
+      <div class="objetivos-container">
+        <!-- TEXTO IZQUIERDA -->
+        <div class="objetivos-texto">
+          <h2>Nuestro Objetivo</h2>
+          <p>
+            Buscamos promover la inclusión y el acceso a la comunicación
+            mediante una herramienta moderna, intuitiva y completa. Aquí podrás
+            aprender desde cero, practicar con material audiovisual y evaluar tu
+            progreso con actividades interactivas.
+          </p>
+        </div>
+
+        <!-- CARDS DERECHA -->
+        <div class="objetivos-cards">
+          <!-- Card 1 -->
+          <div class="card card-verde">
+            <div class="content">
+              <img class="icono-animado" src="./assets/icons/inclusion social real transparente.gif" alt="icono inclusion social">
+              <div class="text-block">
+                <h3 class="heading">Inclusión social real</h3>
+                <p class="para">
+                  La Lengua de Señas facilita la comunicación con personas Sordas.
+                  Nuestra plataforma ofrece videos claros y ejercicios prácticos
+                  para promover una inclusión real y accesible.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="card card-naranja">
+            <div class="content">
+              <img class="icono-animado" src="./assets/icons/aprendizaje visual transparente.gif" alt="icono aprendizaje visual">
+              <div class="text-block">
+                <h3 class="heading">Aprendizaje visual</h3>
+                <p class="para">
+                  El aprendizaje es visual. Incluimos videos, imágenes y ejercicios interactivos
+que facilitan la retención de las señas de manera natural, promoviendo un
+proceso más dinámico y efectivo.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="card card-azul">
+            <div class="content">
+              <img class="icono-animado" src="./assets/icons/acceso-publico-transaprente.gif" alt="icono acceo para todos">
+              <div class="text-block">
+                <h3 class="heading">Acceso para todos</h3>
+                <p class="para">
+                  No necesitás experiencia previa. Cualquier persona puede
+                  aprender a su ritmo y acceder libremente al material
+                  disponible.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="card card-violeta">
+            <div class="content">
+              <img class="icono-animado" src="./assets/icons/progreso personal.gif" alt=" icono progreso personal">
+              <div class="text-block">
+                <h3 class="heading">Progreso personal</h3>
+                <p class="para">
+                  Ejercicios de memoria, videos y exámenes fortalecen tus
+                  habilidades visuales y tu reconocimiento de señas en
+                  situaciones reales.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ALUMNOS -->
+    <!-- <section id="alumno" class="info bg-white">
+      <h2>¿Qué Podrá Hacer el Alumno?</h2>
+      <p>Una vez registrado en la plataforma, el alumno podrá:</p>
+      <ul class="alumno-lista">
+        <li>✔ Acceder a recursos creados por docentes especializados.</li>
+        <li>✔ Aprender lengua de señas mediante videos explicativos.</li>
+        <li>
+          ✔ Realizar un examen interactivo para evaluar sus conocimientos.
+        </li>
+        <li>✔ Progresar mediante material organizado y actualizado.</li>
+      </ul>
+    </section> -->
+   <section id="alumno" class="alumno-section">
+  <div class="alumno-wrapper">
+
+    <!-- CARD ALUMNO UIVERSE -->
+    <div class="card-alumno">
+      <div class="header">
+        <h3 class="title">¿Qué podrá hacer el alumno?</h3>
+      </div>
+
+      <p class="desc">Una vez registrado en la plataforma:</p>
+
+      <ul class="lists">
+
+        <li class="list">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+            viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M4.5 12.75l6 6 9-13.5" />
+          </svg>
+          Acceder a recursos creados por docentes especializados.
+        </li>
+
+        <li class="list">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+            viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M4.5 12.75l6 6 9-13.5" />
+          </svg>
+          Aprender lengua de señas mediante videos explicativos.
+        </li>
+
+        <li class="list">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+            viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M4.5 12.75l6 6 9-13.5" />
+          </svg>
+          Realizar un examen interactivo para evaluar sus conocimientos.
+        </li>
+
+        <li class="list">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+            viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M4.5 12.75l6 6 9-13.5" />
+          </svg>
+          Progresar mediante material organizado y actualizado.
+        </li>
+
+      </ul>
+
+      <button class="action" onclick="location.href = 'registro.html'"">Comenzar ahora </button>
+    </div>
+
+    <!-- VIDEO -->
+    <div class="alumno-video">
+      <iframe width="100%" height="315"
+        src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+        frameborder="0" allowfullscreen>
+      </iframe>
+    </div>
+
+  </div>
+</section>
+
+
+    <!-- RECURSOS -->
+    <section id="recursos" class="recursos">
+      <h2>Recursos Públicos</h2>
+
+      <div class="card-container">
+        <div class="card card-verde">
+          <div class="recursos-content">
+            <img class="icono-animado" src="./assets/icons/video.gif" alt="icono video">
+            <h3 class="heading">Videos Introductorios</h3>
+            <p class="para">Aprende las primeras señas esenciales.</p>
+          </div>
+        </div>
+
+        <div class="card card-naranja">
+          <div class="recursos-content">
+            <img class="icono-animado" src="./assets/icons/abecedario.gif" alt="icono abecedario">
+            <h3 class="heading">Abecedario en LSA</h3>
+            <p class="para">Conocé el alfabeto en lengua de señas.</p>
+          </div>
+        </div>
+
+        <div class="card card-azul">
+          <div class="recursos-content">
+            <img class="icono-animado" src="./assets/icons/lista tareas.gif" alt="icono lista tareas">
+            <h3 class="heading">Prácticas Básicas</h3>
+            <p class="para">Ejercicios simples para comenzar.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- POR QUÉ ELEGIRNOS -->
+    <!-- <section id="porque" class="info bg-white">
+      <h2>¿Por Qué Elegirnos?</h2>
+      <p>
+        Diseñamos esta herramienta pensando en la accesibilidad, claridad y
+        facilidad de uso. Nuestra plataforma se actualiza constantemente y
+        ofrece una experiencia educativa completa: material, práctica y
+        evaluación en un solo lugar.
+      </p>
+    </section> -->
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-section">
+          <h3>Plataforma LSA</h3>
+          <p>
+            Proyecto educativo desarrollado por estudiantes de la UTN para
+            promover la inclusión y el aprendizaje de Lengua de Señas Argentina.
+          </p>
+        </div>
+
+        <div class="footer-section">
+          <h4>Enlaces UTN</h4>
+          <ul>
+            <li>
+              <a href="https://www.utn.edu.ar" target="_blank"
+                >UTN - Sitio Oficial</a
+              >
+            </li>
+            <li>
+              <a href="https://www.frt.utn.edu.ar" target="_blank">UTN FRT</a>
+            </li>
+            <li>
+              <a href="https://www.sied.utn.edu.ar" target="_blank"
+                >Campus Virtual</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4>Redes Sociales</h4>
+          <div class="social-icons">
+            <a href="https://www.instagram.com/utntucuman/" target="_blank">
+              <img src="assets/icons/instagram.svg" alt="Instagram" />
+            </a>
+            <a
+              href="https://www.facebook.com/utntucuman/?locale=es_LA"
+              target="_blank"
+            >
+              <img src="assets/icons/facebook.svg" alt="Facebook" />
+            </a>
+            <a href="https://www.youtube.com/@UTNTUC/videos" target="_blank">
+              <img src="assets/icons/youtube.svg" alt="YouTube" />
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>© 2025 Plataforma Educativa de Lengua de Señas - UTN</p>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

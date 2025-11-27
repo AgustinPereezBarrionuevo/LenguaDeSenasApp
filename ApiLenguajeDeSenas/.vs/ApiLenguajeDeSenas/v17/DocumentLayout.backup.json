@@ -1,0 +1,371 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Jose_\\OneDrive\\Escritorio\\ProyectoFinalTesis\\ApiLenguajeDeSenas\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C2164703-4C1F-4D90-ADF3-4D7C14887C68}|ApiLenguajeDeSenas.csproj|c:\\users\\jose_\\onedrive\\escritorio\\proyectofinaltesis\\apilenguajedesenas\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2164703-4C1F-4D90-ADF3-4D7C14887C68}|ApiLenguajeDeSenas.csproj|solutionrelative:models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2164703-4C1F-4D90-ADF3-4D7C14887C68}|ApiLenguajeDeSenas.csproj|c:\\users\\jose_\\onedrive\\escritorio\\proyectofinaltesis\\apilenguajedesenas\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2164703-4C1F-4D90-ADF3-4D7C14887C68}|ApiLenguajeDeSenas.csproj|solutionrelative:controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2164703-4C1F-4D90-ADF3-4D7C14887C68}|ApiLenguajeDeSenas.csproj|c:\\users\\jose_\\onedrive\\escritorio\\proyectofinaltesis\\apilenguajedesenas\\services\\recursodidacticoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2164703-4C1F-4D90-ADF3-4D7C14887C68}|ApiLenguajeDeSenas.csproj|solutionrelative:services\\recursodidacticoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2164703-4C1F-4D90-ADF3-4D7C14887C68}|ApiLenguajeDeSenas.csproj|c:\\users\\jose_\\onedrive\\escritorio\\proyectofinaltesis\\apilenguajedesenas\\services\\docenteservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2164703-4C1F-4D90-ADF3-4D7C14887C68}|ApiLenguajeDeSenas.csproj|solutionrelative:services\\docenteservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2164703-4C1F-4D90-ADF3-4D7C14887C68}|ApiLenguajeDeSenas.csproj|c:\\users\\jose_\\onedrive\\escritorio\\proyectofinaltesis\\apilenguajedesenas\\controllers\\recursosdidacticoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2164703-4C1F-4D90-ADF3-4D7C14887C68}|ApiLenguajeDeSenas.csproj|solutionrelative:controllers\\recursosdidacticoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2164703-4C1F-4D90-ADF3-4D7C14887C68}|ApiLenguajeDeSenas.csproj|c:\\users\\jose_\\onedrive\\escritorio\\proyectofinaltesis\\apilenguajedesenas\\models\\recursodidactico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2164703-4C1F-4D90-ADF3-4D7C14887C68}|ApiLenguajeDeSenas.csproj|solutionrelative:models\\recursodidactico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2164703-4C1F-4D90-ADF3-4D7C14887C68}|ApiLenguajeDeSenas.csproj|c:\\users\\jose_\\onedrive\\escritorio\\proyectofinaltesis\\apilenguajedesenas\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2164703-4C1F-4D90-ADF3-4D7C14887C68}|ApiLenguajeDeSenas.csproj|solutionrelative:controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2164703-4C1F-4D90-ADF3-4D7C14887C68}|ApiLenguajeDeSenas.csproj|c:\\users\\jose_\\onedrive\\escritorio\\proyectofinaltesis\\apilenguajedesenas\\controllers\\docentecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2164703-4C1F-4D90-ADF3-4D7C14887C68}|ApiLenguajeDeSenas.csproj|solutionrelative:controllers\\docentecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2164703-4C1F-4D90-ADF3-4D7C14887C68}|ApiLenguajeDeSenas.csproj|c:\\users\\jose_\\onedrive\\escritorio\\proyectofinaltesis\\apilenguajedesenas\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{C2164703-4C1F-4D90-ADF3-4D7C14887C68}|ApiLenguajeDeSenas.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2164703-4C1F-4D90-ADF3-4D7C14887C68}|ApiLenguajeDeSenas.csproj|c:\\users\\jose_\\onedrive\\escritorio\\proyectofinaltesis\\apilenguajedesenas\\models\\docente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2164703-4C1F-4D90-ADF3-4D7C14887C68}|ApiLenguajeDeSenas.csproj|solutionrelative:models\\docente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2164703-4C1F-4D90-ADF3-4D7C14887C68}|ApiLenguajeDeSenas.csproj|c:\\users\\jose_\\onedrive\\escritorio\\proyectofinaltesis\\apilenguajedesenas\\interfaces\\idocenteservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2164703-4C1F-4D90-ADF3-4D7C14887C68}|ApiLenguajeDeSenas.csproj|solutionrelative:interfaces\\idocenteservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2164703-4C1F-4D90-ADF3-4D7C14887C68}|ApiLenguajeDeSenas.csproj|c:\\users\\jose_\\onedrive\\escritorio\\proyectofinaltesis\\apilenguajedesenas\\dtos\\docentecreaciondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2164703-4C1F-4D90-ADF3-4D7C14887C68}|ApiLenguajeDeSenas.csproj|solutionrelative:dtos\\docentecreaciondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2164703-4C1F-4D90-ADF3-4D7C14887C68}|ApiLenguajeDeSenas.csproj|c:\\users\\jose_\\onedrive\\escritorio\\proyectofinaltesis\\apilenguajedesenas\\services\\usuarioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2164703-4C1F-4D90-ADF3-4D7C14887C68}|ApiLenguajeDeSenas.csproj|solutionrelative:services\\usuarioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2164703-4C1F-4D90-ADF3-4D7C14887C68}|ApiLenguajeDeSenas.csproj|c:\\users\\jose_\\onedrive\\escritorio\\proyectofinaltesis\\apilenguajedesenas\\dtos\\passwordupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2164703-4C1F-4D90-ADF3-4D7C14887C68}|ApiLenguajeDeSenas.csproj|solutionrelative:dtos\\passwordupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2164703-4C1F-4D90-ADF3-4D7C14887C68}|ApiLenguajeDeSenas.csproj|c:\\users\\jose_\\onedrive\\escritorio\\proyectofinaltesis\\apilenguajedesenas\\dtos\\usuarioupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2164703-4C1F-4D90-ADF3-4D7C14887C68}|ApiLenguajeDeSenas.csproj|solutionrelative:dtos\\usuarioupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2164703-4C1F-4D90-ADF3-4D7C14887C68}|ApiLenguajeDeSenas.csproj|c:\\users\\jose_\\onedrive\\escritorio\\proyectofinaltesis\\apilenguajedesenas\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2164703-4C1F-4D90-ADF3-4D7C14887C68}|ApiLenguajeDeSenas.csproj|solutionrelative:data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2164703-4C1F-4D90-ADF3-4D7C14887C68}|ApiLenguajeDeSenas.csproj|c:\\users\\jose_\\onedrive\\escritorio\\proyectofinaltesis\\apilenguajedesenas\\interfaces\\iusuarioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2164703-4C1F-4D90-ADF3-4D7C14887C68}|ApiLenguajeDeSenas.csproj|solutionrelative:interfaces\\iusuarioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2164703-4C1F-4D90-ADF3-4D7C14887C68}|ApiLenguajeDeSenas.csproj|c:\\users\\jose_\\onedrive\\escritorio\\proyectofinaltesis\\apilenguajedesenas\\interfaces\\irecursodidacticoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2164703-4C1F-4D90-ADF3-4D7C14887C68}|ApiLenguajeDeSenas.csproj|solutionrelative:interfaces\\irecursodidacticoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2164703-4C1F-4D90-ADF3-4D7C14887C68}|ApiLenguajeDeSenas.csproj|c:\\users\\jose_\\onedrive\\escritorio\\proyectofinaltesis\\apilenguajedesenas\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2164703-4C1F-4D90-ADF3-4D7C14887C68}|ApiLenguajeDeSenas.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2164703-4C1F-4D90-ADF3-4D7C14887C68}|ApiLenguajeDeSenas.csproj|c:\\users\\jose_\\onedrive\\escritorio\\proyectofinaltesis\\apilenguajedesenas\\migrations\\20251113190743_inicial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2164703-4C1F-4D90-ADF3-4D7C14887C68}|ApiLenguajeDeSenas.csproj|solutionrelative:migrations\\20251113190743_inicial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 200,
+          "SelectedChildIndex": 10,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "RecursosDidacticosController.cs",
+              "DocumentMoniker": "C:\\Users\\Jose_\\OneDrive\\Escritorio\\ProyectoFinalTesis\\ApiLenguajeDeSenas\\Controllers\\RecursosDidacticosController.cs",
+              "RelativeDocumentMoniker": "Controllers\\RecursosDidacticosController.cs",
+              "ToolTip": "C:\\Users\\Jose_\\OneDrive\\Escritorio\\ProyectoFinalTesis\\ApiLenguajeDeSenas\\Controllers\\RecursosDidacticosController.cs",
+              "RelativeToolTip": "Controllers\\RecursosDidacticosController.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-13T18:27:58.974Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "DocenteController.cs",
+              "DocumentMoniker": "C:\\Users\\Jose_\\OneDrive\\Escritorio\\ProyectoFinalTesis\\ApiLenguajeDeSenas\\Controllers\\DocenteController.cs",
+              "RelativeDocumentMoniker": "Controllers\\DocenteController.cs",
+              "ToolTip": "C:\\Users\\Jose_\\OneDrive\\Escritorio\\ProyectoFinalTesis\\ApiLenguajeDeSenas\\Controllers\\DocenteController.cs",
+              "RelativeToolTip": "Controllers\\DocenteController.cs",
+              "ViewState": "AgIAAEMAAAAAAAAAAADwv2wAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-13T18:27:47.427Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DocenteService.cs",
+              "DocumentMoniker": "C:\\Users\\Jose_\\OneDrive\\Escritorio\\ProyectoFinalTesis\\ApiLenguajeDeSenas\\Services\\DocenteService.cs",
+              "RelativeDocumentMoniker": "Services\\DocenteService.cs",
+              "ToolTip": "C:\\Users\\Jose_\\OneDrive\\Escritorio\\ProyectoFinalTesis\\ApiLenguajeDeSenas\\Services\\DocenteService.cs",
+              "RelativeToolTip": "Services\\DocenteService.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAADwvzUAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-13T18:34:30.446Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "UsuarioController.cs",
+              "DocumentMoniker": "C:\\Users\\Jose_\\OneDrive\\Escritorio\\ProyectoFinalTesis\\ApiLenguajeDeSenas\\Controllers\\UsuarioController.cs",
+              "RelativeDocumentMoniker": "Controllers\\UsuarioController.cs",
+              "ToolTip": "C:\\Users\\Jose_\\OneDrive\\Escritorio\\ProyectoFinalTesis\\ApiLenguajeDeSenas\\Controllers\\UsuarioController.cs",
+              "RelativeToolTip": "Controllers\\UsuarioController.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAADwv00AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-13T18:05:26.554Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "RecursoDidactico.cs",
+              "DocumentMoniker": "C:\\Users\\Jose_\\OneDrive\\Escritorio\\ProyectoFinalTesis\\ApiLenguajeDeSenas\\Models\\RecursoDidactico.cs",
+              "RelativeDocumentMoniker": "Models\\RecursoDidactico.cs",
+              "ToolTip": "C:\\Users\\Jose_\\OneDrive\\Escritorio\\ProyectoFinalTesis\\ApiLenguajeDeSenas\\Models\\RecursoDidactico.cs",
+              "RelativeToolTip": "Models\\RecursoDidactico.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-13T18:25:47.195Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "RecursoDidacticoService.cs",
+              "DocumentMoniker": "C:\\Users\\Jose_\\OneDrive\\Escritorio\\ProyectoFinalTesis\\ApiLenguajeDeSenas\\Services\\RecursoDidacticoService.cs",
+              "RelativeDocumentMoniker": "Services\\RecursoDidacticoService.cs",
+              "ToolTip": "C:\\Users\\Jose_\\OneDrive\\Escritorio\\ProyectoFinalTesis\\ApiLenguajeDeSenas\\Services\\RecursoDidacticoService.cs",
+              "RelativeToolTip": "Services\\RecursoDidacticoService.cs",
+              "ViewState": "AgIAACsAAAAAAAAAAADwv0oAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-13T18:34:55.916Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\Jose_\\OneDrive\\Escritorio\\ProyectoFinalTesis\\ApiLenguajeDeSenas\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\Jose_\\OneDrive\\Escritorio\\ProyectoFinalTesis\\ApiLenguajeDeSenas\\Controllers\\AuthController.cs*",
+              "RelativeToolTip": "Controllers\\AuthController.cs*",
+              "ViewState": "AgIAAAkAAAAAAAAAAADgvx4AAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-13T22:54:22.267Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Usuario.cs",
+              "DocumentMoniker": "C:\\Users\\Jose_\\OneDrive\\Escritorio\\ProyectoFinalTesis\\ApiLenguajeDeSenas\\Models\\Usuario.cs",
+              "RelativeDocumentMoniker": "Models\\Usuario.cs",
+              "ToolTip": "C:\\Users\\Jose_\\OneDrive\\Escritorio\\ProyectoFinalTesis\\ApiLenguajeDeSenas\\Models\\Usuario.cs",
+              "RelativeToolTip": "Models\\Usuario.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-13T18:03:59.851Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Jose_\\OneDrive\\Escritorio\\ProyectoFinalTesis\\ApiLenguajeDeSenas\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\Jose_\\OneDrive\\Escritorio\\ProyectoFinalTesis\\ApiLenguajeDeSenas\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAB8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-11-13T18:43:14.816Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Docente.cs",
+              "DocumentMoniker": "C:\\Users\\Jose_\\OneDrive\\Escritorio\\ProyectoFinalTesis\\ApiLenguajeDeSenas\\Models\\Docente.cs",
+              "RelativeDocumentMoniker": "Models\\Docente.cs",
+              "ToolTip": "C:\\Users\\Jose_\\OneDrive\\Escritorio\\ProyectoFinalTesis\\ApiLenguajeDeSenas\\Models\\Docente.cs",
+              "RelativeToolTip": "Models\\Docente.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAACwAAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-13T18:25:30.423Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "IDocenteService.cs",
+              "DocumentMoniker": "C:\\Users\\Jose_\\OneDrive\\Escritorio\\ProyectoFinalTesis\\ApiLenguajeDeSenas\\Interfaces\\IDocenteService.cs",
+              "RelativeDocumentMoniker": "Interfaces\\IDocenteService.cs",
+              "ToolTip": "C:\\Users\\Jose_\\OneDrive\\Escritorio\\ProyectoFinalTesis\\ApiLenguajeDeSenas\\Interfaces\\IDocenteService.cs",
+              "RelativeToolTip": "Interfaces\\IDocenteService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-13T18:26:35.937Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\Jose_\\OneDrive\\Escritorio\\ProyectoFinalTesis\\ApiLenguajeDeSenas\\Data\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\Jose_\\OneDrive\\Escritorio\\ProyectoFinalTesis\\ApiLenguajeDeSenas\\Data\\AppDbContext.cs",
+              "RelativeToolTip": "Data\\AppDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-13T18:07:22.133Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "DocenteCreacionDto.cs",
+              "DocumentMoniker": "C:\\Users\\Jose_\\OneDrive\\Escritorio\\ProyectoFinalTesis\\ApiLenguajeDeSenas\\Dtos\\DocenteCreacionDto.cs",
+              "RelativeDocumentMoniker": "Dtos\\DocenteCreacionDto.cs",
+              "ToolTip": "C:\\Users\\Jose_\\OneDrive\\Escritorio\\ProyectoFinalTesis\\ApiLenguajeDeSenas\\Dtos\\DocenteCreacionDto.cs",
+              "RelativeToolTip": "Dtos\\DocenteCreacionDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-23T21:44:10.116Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "UsuarioService.cs",
+              "DocumentMoniker": "C:\\Users\\Jose_\\OneDrive\\Escritorio\\ProyectoFinalTesis\\ApiLenguajeDeSenas\\Services\\UsuarioService.cs",
+              "RelativeDocumentMoniker": "Services\\UsuarioService.cs",
+              "ToolTip": "C:\\Users\\Jose_\\OneDrive\\Escritorio\\ProyectoFinalTesis\\ApiLenguajeDeSenas\\Services\\UsuarioService.cs",
+              "RelativeToolTip": "Services\\UsuarioService.cs",
+              "ViewState": "AgIAADQAAAAAAAAAAAAAAFUAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-13T18:05:06.445Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "UsuarioUpdateDto.cs",
+              "DocumentMoniker": "C:\\Users\\Jose_\\OneDrive\\Escritorio\\ProyectoFinalTesis\\ApiLenguajeDeSenas\\Dtos\\UsuarioUpdateDto.cs",
+              "RelativeDocumentMoniker": "Dtos\\UsuarioUpdateDto.cs",
+              "ToolTip": "C:\\Users\\Jose_\\OneDrive\\Escritorio\\ProyectoFinalTesis\\ApiLenguajeDeSenas\\Dtos\\UsuarioUpdateDto.cs",
+              "RelativeToolTip": "Dtos\\UsuarioUpdateDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-23T20:23:16.355Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "PasswordUpdateDto.cs",
+              "DocumentMoniker": "C:\\Users\\Jose_\\OneDrive\\Escritorio\\ProyectoFinalTesis\\ApiLenguajeDeSenas\\Dtos\\PasswordUpdateDto.cs",
+              "RelativeDocumentMoniker": "Dtos\\PasswordUpdateDto.cs",
+              "ToolTip": "C:\\Users\\Jose_\\OneDrive\\Escritorio\\ProyectoFinalTesis\\ApiLenguajeDeSenas\\Dtos\\PasswordUpdateDto.cs",
+              "RelativeToolTip": "Dtos\\PasswordUpdateDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-23T20:25:34.116Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "IUsuarioService.cs",
+              "DocumentMoniker": "C:\\Users\\Jose_\\OneDrive\\Escritorio\\ProyectoFinalTesis\\ApiLenguajeDeSenas\\Interfaces\\IUsuarioService.cs",
+              "RelativeDocumentMoniker": "Interfaces\\IUsuarioService.cs",
+              "ToolTip": "C:\\Users\\Jose_\\OneDrive\\Escritorio\\ProyectoFinalTesis\\ApiLenguajeDeSenas\\Interfaces\\IUsuarioService.cs",
+              "RelativeToolTip": "Interfaces\\IUsuarioService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-13T18:04:42.099Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "IRecursoDidacticoService.cs",
+              "DocumentMoniker": "C:\\Users\\Jose_\\OneDrive\\Escritorio\\ProyectoFinalTesis\\ApiLenguajeDeSenas\\Interfaces\\IRecursoDidacticoService.cs",
+              "RelativeDocumentMoniker": "Interfaces\\IRecursoDidacticoService.cs",
+              "ToolTip": "C:\\Users\\Jose_\\OneDrive\\Escritorio\\ProyectoFinalTesis\\ApiLenguajeDeSenas\\Interfaces\\IRecursoDidacticoService.cs",
+              "RelativeToolTip": "Interfaces\\IRecursoDidacticoService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-13T18:27:06.118Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Jose_\\OneDrive\\Escritorio\\ProyectoFinalTesis\\ApiLenguajeDeSenas\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\Jose_\\OneDrive\\Escritorio\\ProyectoFinalTesis\\ApiLenguajeDeSenas\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAAA4AAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-13T17:58:25.657Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "20251113190743_Inicial.cs",
+              "DocumentMoniker": "C:\\Users\\Jose_\\OneDrive\\Escritorio\\ProyectoFinalTesis\\ApiLenguajeDeSenas\\Migrations\\20251113190743_Inicial.cs",
+              "RelativeDocumentMoniker": "Migrations\\20251113190743_Inicial.cs",
+              "ToolTip": "C:\\Users\\Jose_\\OneDrive\\Escritorio\\ProyectoFinalTesis\\ApiLenguajeDeSenas\\Migrations\\20251113190743_Inicial.cs",
+              "RelativeToolTip": "Migrations\\20251113190743_Inicial.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-13T19:07:43.202Z"
+            }
+          ]
+        },
+        {
+          "DockedHeight": 200,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

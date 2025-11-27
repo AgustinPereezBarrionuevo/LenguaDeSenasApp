@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="
+    default-src 'self' https://localhost:7061;
+    style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://fonts.gstatic.com;
+    font-src 'self' https://fonts.gstatic.com;
+    script-src 'self' 'unsafe-inline';
+    connect-src 'self' https://localhost:7061 http://127.0.0.1:5500;">
+    <title>Panel Docente</title>
+    <link rel="icon" type="image/png" href="assets/Favicon/Logo-LSA.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/docente.css">
+</head>
+<body>
+   <button id="toggleMenu" class="menu-btn">☰</button>
+    <aside class="sidebar">
+        <h2 class="logo">Docente</h2>
+        <nav>
+            <a href="#" class="active">Panel</a>
+            <a href="mis-recursos.html">Mis Recursos</a>
+            <a href="subir-recursos.html">Subir Recurso</a>
+            <a href="perfil.html">Mi Perfil</a>
+            <a href="index.html" class="nav-item">Volver al Inicio</a> 
+            <a href="index.html" id="logout">Cerrar Sesión</a>
+        </nav>
+    </aside>
+
+ 
+    <main class="content">
+
+        <header>
+            <h1>Panel del Docente</h1>
+            <p class="bienvenida">Bienvenido/a, aquí podés gestionar tu material didáctico.</p>
+        </header>
+
+      
+        <section class="cards">
+            <div class="card">
+                <h3>Recursos Publicados</h3>
+                <p id="countRecursosDocente">0</p>
+            </div>
+
+
+
+            <div class="card">
+                <h3>Material Reciente</h3>
+                <p id="reciente">N/A</p>
+            </div>
+        </section>
+
+      
+        <section id="mis-recursos" class="tabla-section">
+            <h2>Mis Recursos</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Título</th>
+                        <th>Descripción</th>
+                        <th>Fecha</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+
+                <tbody id="tablaRecursosDocente">
+              
+                </tbody>
+            </table>
+        </section>
+
+    </main>
+
+    
+     <script type="module">
+    import { verificarAcceso } from "./js/auth-guard.js";
+    verificarAcceso(["Docente"]);
+    </script>
+   <script src="js/docente.js" type="module"></script>
+    <script src="js/utils.js" type="module"></script>
+    <script src="js/logout.js"></script>
+   
+  
+
+</body>
+
+</html>

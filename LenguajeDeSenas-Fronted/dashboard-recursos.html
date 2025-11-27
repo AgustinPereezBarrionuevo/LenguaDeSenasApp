@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Alumno | Recursos</title>
+    <link rel="stylesheet" href="css/recursos.css">
+    <link rel="icon" type="image/png" href="assets/Favicon/Logo-LSA.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+
+    <div class="dashboard-wrapper">
+        <button id="toggleMenu" class="menu-btn">☰</button>
+        <aside class="sidebar">
+            <h2 class="logo">Alumno</h2>
+            <nav class="sidebar-nav">
+                <a href="dashboard-alumno.html" class="nav-item">Panel</a> 
+               
+                <a href="dashboard-recursos.html" class="nav-item active">Recursos</a>
+                
+                <a href="perfil.html" class="nav-item">Mi Perfil</a>
+
+                <a href="index.html" class="nav-item">Volver al Inicio</a> 
+                       
+                <a href="index.html" class="nav-item">Cerrar Sesión</a>
+            </nav>
+        </aside>
+
+        <main class="content-main container">
+            <h1> Recursos Didácticos</h1>
+            <p class="subtitulo">Material exclusivo y completo creado por tus docentes.</p>
+
+            <div id="listaRecursosAlumno" class="card-container">
+                <p>Cargando recursos...</p>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/recursos.js"></script> 
+    <script src="js/logout.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<link rel="stylesheet" href="Css/memoria.css">
+<link rel="icon" type="image/png" href="assets/Favicon/Logo-LSA.png">
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+<title>Memoria LSA</title>
+</head>
+
+<body>
+  <div class="container" role="application" aria-label="Memotest Lengua de Señas Argentina">
+    <header>
+      <div>
+         <a href="dashboard-alumno.html" class="link-volver">⟵ Volver</a>
+        <h1>Memotest - Lengua de Señas (demo)</h1>
+        <div style="font-size:13px;color:#445566">Encuentra las parejas: imagen de la seña ↔ letra</div>
+      </div>
+
+      <div class="controls">
+        <div class="stats">
+          <div>Intentos: <span id="attempts">0</span></div>
+          <div>Matches: <span id="matches">0</span></div>
+          <div>Tiempo: <span id="timer">00:00</span></div>
+        </div>
+        <select id="level" class="level-select" title="Seleccionar dificultad">
+          <option value="6">Fácil (6 pares)</option>
+          <option value="8" selected>Medio (8 pares)</option>
+          <option value="12">Difícil (12 pares)</option>
+        </select>
+        <button id="restart" class="btn">Reiniciar</button>
+      </div>
+    </header>
+
+    <main>
+      <section id="board" class="board" aria-live="polite"></section>
+      <div class="footer">
+        <div class="message" id="messageArea">¡Buena suerte!</div>
+        <div>
+          <button id="show-all" class="btn secondary">Mostrar todas 2s</button>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- Modal de fin del juego -->
+<div id="finishModal" class="modal-hidden">
+  <div class="modal-content">
+    <h2>🎉 ¡Felicitaciones!</h2>
+    <p id="finishStats"></p>
+
+    <button class="btn" onclick="reiniciarJuego()">🔄 Volver a jugar</button>
+  </div>
+</div>
+
+    <script src="js/memoria.js" type="module"></script>
+
+  </body>
+</html>
+

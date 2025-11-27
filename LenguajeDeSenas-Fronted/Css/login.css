@@ -1,0 +1,104 @@
+:root {
+    --azul-oscuro: #003366;
+    --celeste: #4db8ff;
+    --celeste-claro: #e6f6ff;
+    --blanco: #ffffff;
+    --transicion: 0.3s ease;
+}
+
+body {
+    background-image:
+    linear-gradient(rgba(0, 0, 0, 0.308), rgba(0, 0, 0, 0.219)),
+    url(../assets/background/backgroundlogin.jpg);
+    background-repeat: repeat;
+    background-size: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family:"Quicksand", Helvetica, sans-serif;
+}
+
+.login-container {
+    background: #0e4d69;
+    background: linear-gradient(171deg,rgba(14, 77, 105, 1) 1%, rgba(164, 235, 232, 1) 60%, rgba(255, 255, 255, 1) 77%);
+    padding: 40px 35px;
+    width: 350px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+h2 {
+    text-align: center;
+    color: var(--azul-oscuro);
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+    font-size: 14px;
+    color: var(--azul-oscuro);
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0 18px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    transition: var(--transicion);
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--celeste);
+    box-shadow: 0 0 5px var(--celeste);
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: var(--celeste);
+    color: var(--azul-oscuro);
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: var(--transicion);
+}
+
+button:hover {
+    background: var(--blanco);
+    border: 2px solid var(--celeste);
+}
+
+.links {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.links a {
+    display: block;
+    color: var(--azul-oscuro);
+    margin-top: 10px;
+    text-decoration: none;
+    transition: var(--transicion);
+}
+
+.links a:hover {
+    color: var(--celeste);
+}
+
+#mensaje {
+    margin-top: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+}

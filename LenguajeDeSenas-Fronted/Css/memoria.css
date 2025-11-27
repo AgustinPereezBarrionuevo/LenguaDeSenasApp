@@ -1,0 +1,221 @@
+  :root{
+    --bg: #f4fbff;
+    --card-back: #2b6cb0;
+    --blanco: #ffffff;
+    --celeste: #4db8ff;
+    --sombra: rgba(0,0,0,0.12);
+    --azul-oscuro: #003366;
+    --celeste-claro: #e6f6ff;
+     --transicion: 0.3s ease;
+
+    --radius: 10px;
+  }
+  body{
+   font-family:  "Quicksand", Helvetica, sans-serif;
+    background: linear-gradient(180deg,var(--bg), #ffffff 60%);
+    margin:0;
+    min-height:100vh;
+    display:flex;
+    align-items:flex-start;
+    justify-content:center;
+    padding:28px;
+    color:#073642;
+     background: #0e4d69;
+    background: linear-gradient(171deg,rgba(14, 78, 105, 0.979) 1%, rgba(164, 235, 232, 1) 60%, rgba(255, 255, 255, 1) 77%);
+    
+  }
+  .container{
+    width:100%;
+    max-width:980px;
+    background:rgba(255,255,255,0.9);
+    padding:18px;
+    border-radius:12px;
+    box-shadow:0 8px 30px var(--sombra);
+  }
+  header{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:12px;
+  }
+  h1{font-size:20px;margin:0; margin-top: 20px;}
+  .controls{display:flex;gap:8px;align-items:center}
+  .btn{
+    background:var(--celeste);
+    border:none;
+    color:white;
+    padding:8px 12px;
+    border-radius:8px;
+    cursor:pointer;
+    font-weight:600;
+  }
+  .btn.secondary{
+    background:#e6f6ff;
+    color:#073642;
+    border:1px solid rgba(0,0,0,0.06);
+  }
+
+
+
+  
+.link-volver {
+      padding: 10px 20px;
+  background: var(--azul-oscuro);
+  color: white;
+  font-size: 18px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.link-volver:hover {
+   background: #0088cc;
+    color: var(--azul-oscuro);
+}
+
+
+  .stats{
+    display:flex;
+    gap:12px;
+    align-items:center;
+    font-size:14px;
+  }
+
+  .board{
+    margin-top:18px;
+    display:grid;
+    gap:12px;
+    /* responsive columns; will be overridden by js to set columns */
+    grid-template-columns: repeat(4, 1fr);
+    perspective:1000px;
+  }
+
+  .card{
+    width:100%;
+    padding-top:100%; /* square */
+    position:relative;
+    cursor:pointer;
+    transform-style:preserve-3d;
+    transition:transform 400ms;
+  }
+  .card.flip{
+    transform:rotateY(180deg);
+  }
+  .card .face{
+    position:absolute;
+    inset:0;
+    backface-visibility:hidden;
+    border-radius:12px;
+    overflow:hidden;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    box-shadow:0 6px 18px var(--shadow);
+  }
+  .card .back{
+    background: linear-gradient(135deg,var(--card-back), #234e86);
+    color:white;
+    transform: rotateY(0deg);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:28px;
+  }
+  .card .front{
+    background:var(--blanco);
+    transform: rotateY(180deg);
+    padding:8px;
+  }
+  .card img{
+    max-width:100%;
+    max-height:100%;
+    object-fit:cover;
+  }
+  .hidden{
+    visibility:hidden;
+    pointer-events:none;
+    transform:scale(0.98);
+    transition:visibility 400ms;
+  }
+
+    .matched {
+    pointer-events: none; /* No se pueden cliclear */
+    opacity: 1;           /* Asegura que se vean normales */
+    }
+
+
+
+    /* Fondo del modal */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+/* Ocultar modal */
+.modal-hidden {
+  display: none;
+}
+
+/* Caja del modal */
+.modal-content {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  text-align: center;
+  width: 80%;
+  max-width: 350px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  animation: popup 0.3s ease-out;
+}
+
+@keyframes popup {
+  from { transform: scale(0.7); opacity: 0; }
+  to   { transform: scale(1); opacity: 1; }
+}
+
+/* Botón “Volver a jugar” */
+.btn {
+  margin-top: 10px;
+  width: 100%;
+  padding: 10px;
+  font-size: 18px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  background: #007bff;
+  color: white;
+}
+
+/* Botón secundario */
+.btn.secondary-modal {
+  background: #555;
+}
+
+
+
+  .footer{
+    margin-top:14px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:12px;
+  }
+  .level-select{padding:6px;border-radius:8px;border:1px solid rgba(0,0,0,0.06)}
+  .message{
+    font-weight:700;
+    color:#075985;
+  }
+
+  @media (max-width:600px){
+    .container{padding:12px;}
+    h1{font-size:18px;}
+  }

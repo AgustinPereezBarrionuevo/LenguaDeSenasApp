@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Docentes</title>
+    <link rel="icon" type="image/png" href="assets/Favicon/Logo-LSA.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/admin.css">
+    </head>
+<body>
+     <button id="toggleMenu" class="menu-btn">☰</button>
+    <aside class="sidebar">
+        <h2 class="logo">Admin</h2>
+        <nav>
+            <a href="dashboard-admin.html">Panel</a> 
+            <a href="gestion-docentes.html" class="active">Docentes</a>
+            <a href="index.html" class="nav-item">Volver al Inicio</a> 
+            <a href="index.html" id="logout">Cerrar Sesión</a>
+        </nav>
+    </aside>
+
+    <main class="content">
+
+        <header>
+            <h1>Gestión de Docentes</h1>
+        </header>
+
+        <section class="tabla-section">
+            <h2>Docentes registrados</h2>
+            
+            <button id="abrirModalDocente" class="btn-primary" style="margin-bottom: 20px;">
+                ➕ Registrar Nuevo Docente
+            </button>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Email</th>       
+                        <th>DNI</th>
+                        <th>Especialidad</th>
+                        <th>Título Docente</th> 
+                        <th>Fecha de Nacimiento</th> 
+                        <th>Teléfono</th>
+                        <th>CV</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+
+                <tbody id="tablaDocentes">
+                
+                </tbody>
+            </table>
+        </section>
+
+    </main>
+    
+    <div id="modalDocente" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            
+            <h2>Registrar nuevo Docente</h2>
+
+            <form id="formDocente">
+                <div class="form-field">
+                    <label for="buscarUsuario">Buscar Usuario (Alumno/Admin)</label>
+                    <input type="text" id="buscarUsuario" placeholder="Nombre o Email">
+                    <div id="listaUsuarios"></div>
+                    <input type="hidden" id="idUsuarioSeleccionado"> 
+                </div>
+                
+                <div class="form-group-row">
+                    <div class="form-field">
+                        <label for="especialidad">Especialidad</label>
+                        <input type="text" id="especialidad" required placeholder="Ej: Lengua de Señas Argentina">
+                    </div>
+
+                    <div class="form-field">
+                        <label for="tituloDocente">Título Docente/Universitario</label>
+                        <input type="text" id="tituloDocente" required placeholder="Ej: Profesor de LSA">
+                    </div>
+                </div>
+
+                <div class="form-group-row">
+                    <div class="form-field">
+                        <label for="dni">DNI</label>
+                        <input type="text" id="dni" required maxlength="9" pattern="[0-9]*" title="Solo se permiten números (máximo 9 dígitos)." placeholder="Ej: 30123456">
+                    </div>
+
+                    <div class="form-field">
+                        <label for="telefono">Teléfono (Opcional)</label>
+                        <input type="tel" id="telefono" maxlength="10" pattern="[0-9]{7,10}" title="Se requieren entre 7 y 10 dígitos numéricos." placeholder="Ej: 1155551234">
+                    </div>
+                </div>
+                
+                <div class="form-group-row">
+                    <div class="form-field">
+                        <label for="fechaNacimiento">Fecha de Nacimiento</label>
+                        <input type="date" id="fechaNacimiento" required>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="direccion">Dirección (Opcional)</label>
+                        <input type="text" id="direccion" placeholder="Ej: Av. Principal 1234, Ciudad">
+                    </div>
+                </div>
+
+                <div class="form-group-row">
+                    <div class="form-field">
+                        <label for="nacionalidad">Nacionalidad</label>
+                        <select id="nacionalidad">
+                            <option value="">-- Seleccione una Nacionalidad --</option>
+                            <option value="Argentina">Argentina</option>
+                            <option value="Chile">Chile</option>
+                            <option value="Colombia">Colombia</option>
+                            <option value="Ecuador">Ecuador</option>
+                            <option value="España">España</option>
+                            <option value="Mexico">México</option>
+                            <option value="Peru">Perú</option>
+                            <option value="Uruguay">Uruguay</option>
+                            <option value="Venezuela">Venezuela</option>
+                            <option value="Otros">Otro</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-field">
+                        <label for="estadoCivil">Estado Civil (Opcional)</label>
+                        <select id="estadoCivil">
+                            <option value="">-- Seleccione --</option>
+                            <option value="Soltero">Soltero(a)</option>
+                            <option value="Casado">Casado(a)</option>
+                            <option value="Divorciado">Divorciado(a)</option>
+                            <option value="Viudo">Viudo(a)</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="form-field" id="otraNacionalidadContainer" style="display:none; margin-top: 10px;">
+                    <input type="text" id="otraNacionalidad" placeholder="Especifique su nacionalidad">
+                </div>
+
+                <div class="form-field">
+                    <label for="cvUrl">URL del CV o Drive (Opcional)</label>
+                    <input type="url" id="cvUrl" placeholder="Ej: https://drive.google.com/tu-cv-aqui">
+                </div>
+
+                <button type="submit">Promover a Docente</button>
+            </form>
+        </div>
+    </div>
+
+
+    <script src="js/gestion-docente.js" type="module"></script>
+    <script src="js/logout.js"></script>
+</body>
+</html>

@@ -1,0 +1,157 @@
+:root {
+    --azul: #0a3d62;
+    --celeste: #82ccdd;
+    --blanco: #ffffff;
+    --gris: #f5f5f5;
+    --sombra: rgba(0, 0, 0, 0.12);
+}
+
+body {
+    margin: 0;
+    display: flex;
+   background: #0e4d69;
+    background: linear-gradient(171deg,rgba(14, 78, 105, 0.979) 1%, rgba(164, 235, 232, 1) 60%, rgba(255, 255, 255, 1) 77%);
+    font-family:  "Quicksand", Helvetica, sans-serif;
+    height: 100vh;
+}
+
+
+.sidebar {
+    width: 230px;
+    background: var(--azul);
+    color: var(--blanco);
+    height: 100vh;
+    position: fixed;
+    padding: 20px;
+}
+
+.sidebar .logo {
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+.sidebar nav a {
+    display: block;
+    padding: 12px;
+    text-decoration: none;
+    color: var(--blanco);
+    margin-bottom: 12px;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.sidebar nav a:hover,
+.sidebar nav a.active {
+    background: var(--celeste);
+    color: var(--azul);
+}
+
+
+.content {
+    margin-left: 260px;
+    padding: 30px;
+    width: 100%;
+}
+
+h1 {
+    color: var(--azul);
+}
+
+
+.formulario {
+    background: var(--blanco);
+    padding: 30px;
+    max-width: 550px;
+    box-shadow: 0 4px 12px var(--sombra);
+    border-radius: 10px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin: 15px 0 5px;
+    color: var(--azul);
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+}
+
+textarea {
+    resize: none;
+}
+
+.btn-guardar {
+    background: var(--azul);
+    color: var(--blanco);
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 100%;
+}
+
+.btn-guardar:hover {
+    background: var(--celeste);
+    color: var(--azul);
+}
+
+#mensaje {
+    margin-top: 15px;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+
+
+/* ======= SIDEBAR DESPLEGABLE DESDE ARRIBA (MÓVILES) ======= */
+@media (max-width: 767px) {
+
+  .sidebar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;           /* Ahora ocupa ancho completo */
+      height: auto;          /* ¡Ya no es 100vh! Se ajusta a su contenido */
+      max-height: 0;         /* Oculto al inicio */
+      overflow: hidden;
+      transition: max-height 0.35s ease;
+      padding: 0;            /* Se ajusta mejor */
+      box-shadow: none;
+      border-bottom: 4px solid var(--celeste);
+  }
+
+  /* Cuando está abierto */
+  .sidebar.open {
+      max-height: 500px;     /* Ajustá según el contenido */
+      padding: 20px;
+  }
+
+  /* Ajustes internos */
+  .sidebar nav a {
+      font-size: 16px;
+      padding: 10px;
+  }
+
+  .logo {
+      font-size: 20px;
+      margin-bottom: 15px;
+      text-align: center;
+  }
+
+  /* El contenido ya no corre hacia la derecha */
+  .content {
+      margin-left: 0;
+      padding-top: 70px; /* opcional si querés espacio debajo del botón */
+  }
+}

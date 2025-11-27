@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Recurso Didáctico</title>
+    <link rel="icon" type="image/png" href="assets/Favicon/Logo-LSA.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/subir-recursos.css">
+  
+
+</head>
+<body>
+
+     <button id="toggleMenu" class="menu-btn">☰</button>
+    <aside class="sidebar">
+        <h2 class="logo">Docente</h2>
+        <nav>
+            <a href="dashboard-docente.html">Inicio</a>
+            <a href="mis-recursos.html">Mis Recursos</a>
+            <a href="subir-recurso.html" class="active">Subir Recurso</a>
+            <a href="perfil.html">Mi Perfil</a>
+            <a href="index.html" class="nav-item">Volver al Inicio</a> 
+            <a href="#" id="logout">Cerrar Sesión</a>
+        </nav>
+    </aside>
+
+
+    <main class="content">
+        <h1>Crear Recurso Didáctico</h1>
+
+        <form id="formRecurso" class="formulario">
+            
+            <label for="titulo">Título del recurso</label>
+            <input type="text" id="titulo" required>
+
+            <label for="descripcion">Descripción</label>
+            <textarea id="descripcion" rows="4" required></textarea>
+
+            <label for="url">URL del recurso (video, pdf, imagen, drive, etc.)</label>
+            <input type="url" id="url" required>
+
+            <button type="submit" class="btn-guardar">Guardar Recurso</button>
+
+            <p id="mensaje"></p>
+
+        </form>
+    </main>
+
+
+    <script src="js/subir-recurso.js" type="module"></script>
+    <script src="js/logout.js" type="module"></script>
+</body>
+</html>

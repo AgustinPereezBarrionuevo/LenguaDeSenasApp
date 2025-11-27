@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel Administrador</title>
+    <link rel="icon" type="image/png" href="assets/Favicon/Logo-LSA.png">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+     <button id="toggleMenu" class="menu-btn">☰</button>
+    <aside class="sidebar">
+        <h2 class="logo">Admin</h2>
+        <nav>
+            <a href="#" class="active">Panel</a> 
+            <a href="gestion-docentes.html">Docentes</a>
+            <a href="index.html" class="nav-item">Volver al Inicio</a> 
+            <a href="index.html" id="logout">Cerrar Sesión</a>
+        </nav>
+    </aside>
+
+    <main class="content">
+        <header>
+            <h1>Panel de Administración</h1>
+        </header>
+
+        <section class="cards">
+            <div class="card">
+                <h3>Total de Usuarios</h3>
+                <p id="countUsuarios">0</p>
+            </div>
+
+            <div class="card">
+                <h3>Total de Docentes</h3>
+                <p id="countDocentes">0</p>
+            </div>
+
+            <div class="card">
+                <h3>Recursos Publicados</h3>
+                <p id="countRecursos">0</p>
+            </div>
+        </section>
+
+        <section class="tabla-section">
+            <h2>Últimos usuarios registrados</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Email</th>
+                        <th>Rol</th>
+                        <th>Fecha</th>
+                        <th>Eliminar</th>
+                    </tr>
+                </thead>
+                <tbody id="tablaUsuarios">
+                    
+                </tbody>
+            </table>
+        </section>
+
+        <section class="tabla-section">
+
+        <section class="admin-recursos">
+            <h2>Recursos Didácticos</h2>
+            <div id="listaRecursos" class="recursos-container"></div>
+        </section>
+
+    </main>
+
+    <script type="module">
+    import { verificarAcceso } from "./js/auth-guard.js";
+    import { cargarDashboardAdmin, cargarUsuarios } from "./js/admin.js";
+
+    window.actualizarDashboard = cargarDashboardAdmin; 
+    
+    verificarAcceso(["Admin"]);
+    cargarUsuarios();
+    cargarDashboardAdmin();
+    </script>
+
+    <script src="js/logout.js"></script>
+    <script src="js/admin-recursos.js"></script>
+    
+
+
+
+</body>
+</html>

@@ -1,0 +1,567 @@
+:root {
+  --azul-dark: #0a3d62;
+  --celeste: #82ccdd;
+  --blanco: #ffffff;
+  --gris-fondo: #f5f5f5;
+  --gris-claro: #f4f9ff;
+  --azul-header: #005bbb;
+  --azul-btn: #0077ff;
+  --sombra: rgba(0, 0, 0, 0.1);
+}
+
+.solo-docente,
+.solo-alumno {
+  display: none !important;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  font-family: "Quicksand", Helvetica, sans-serif;
+  background: var(--gris-fondo);
+  color: #123;
+  min-height: 100vh;
+  background: #0e4d69;
+  background: linear-gradient(
+    171deg,
+    rgba(14, 78, 105, 0.979) 1%,
+    rgba(164, 235, 232, 1) 60%,
+    rgba(255, 255, 255, 1) 77%
+  );
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.sidebar {
+  width: 230px;
+  background: var(--azul-dark);
+  color: var(--blanco);
+  height: 100vh;
+  padding: 20px;
+  position: fixed;
+  box-shadow: 2px 0 5px var(--sombra);
+}
+
+.sidebar .logo {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.sidebar nav a {
+  display: block;
+  padding: 12px;
+  margin-bottom: 8px;
+  color: var(--blanco);
+  text-decoration: none;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.sidebar nav a.active,
+.sidebar nav a:hover {
+  background: var(--celeste);
+  color: var(--azul-dark);
+  font-weight: bold;
+}
+
+.content {
+  margin-left: 270px;
+  padding: 30px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.page-title {
+  color: var(--blanco);
+  font-size: 28px;
+  border-bottom: 2px solid var(--celeste);
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+}
+
+.perfil-container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.perfil-info {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px var(--sombra);
+  text-align: center;
+  margin-bottom: 30px;
+  border-top: 5px solid var(--azul-btn);
+}
+
+.avatar {
+  width: 120px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  border: 3px solid var(--celeste);
+}
+
+.perfil-acciones {
+  margin-top: 20px;
+}
+
+.editar-btn {
+  margin: 5px 10px;
+  padding: 10px 20px;
+  background: var(--azul-btn);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.editar-btn:hover {
+  background: #0066cc;
+  transform: translateY(-2px);
+}
+
+.panel {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 10px var(--sombra);
+}
+
+.panel h3 {
+  color: var(--azul-dark);
+  border-bottom: 1px dashed #ddd;
+  padding-bottom: 10px;
+}
+
+.panel-btn {
+  display: block;
+  background: var(--azul-btn);
+  color: white;
+  padding: 12px;
+  border-radius: 8px;
+  margin-top: 10px;
+  text-align: center;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.panel-btn:hover {
+  background: #0077cc;
+}
+
+.oculto {
+  display: none;
+}
+
+.avatar-options-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+.avatar-option {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 3px solid transparent;
+  transition: transform 0.2s, border 0.2s;
+  object-fit: cover;
+}
+
+.avatar-option:hover {
+  transform: scale(1.1);
+}
+
+.avatar-option.selected {
+  border: 3px solid var(--azul-btn);
+  box-shadow: 0 0 10px rgba(0, 119, 255, 0.5);
+}
+
+/* ==============================================
+   CSS PARA MODAL Y BOTONES EN PERFIL.HTML
+   ============================================== */
+
+/* --- 1. ESTRUCTURA Y FONDO DEL MODAL --- */
+.modal {
+  display: none; /* Oculto por defecto */
+  position: fixed;
+  z-index: 1000; /* Alto para estar sobre todo */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.6); /* Fondo semitransparente */
+}
+
+/* --- 2. CONTENIDO DEL MODAL (Centrado) --- */
+.modal-content {
+  background-color: var(--blanco);
+
+  /* Método de centrado robusto */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  padding: 30px;
+  border: 2px solid var(--celeste);
+  width: 90%;
+  max-width: 550px; /* Ancho cómodo para formularios de perfil/clave */
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+}
+
+.modal-content h2 {
+  color: var(--azul);
+  border-bottom: 2px solid var(--celeste);
+  padding-bottom: 10px;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+/* Botón de cerrar (X) */
+.close-button {
+  color: var(--azul);
+  float: right;
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  line-height: 1;
+  transition: color 0.3s;
+}
+
+.close-button:hover {
+  color: #c0392b;
+}
+
+/* --- 3. ESTILOS DEL FORMULARIO INTERNO --- */
+.form-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.form-field label {
+  font-weight: 600;
+  color: var(--azul);
+  margin-bottom: 5px;
+  font-size: 0.95em;
+}
+
+.form-field input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box; /* Asegura que padding no afecte el ancho total */
+}
+
+/* Foco de Inputs */
+.form-field input:focus {
+  border-color: var(--celeste);
+  box-shadow: 0 0 0 3px rgba(130, 204, 221, 0.4);
+  outline: none;
+}
+
+/* --- 4. BOTONES DEL MODAL --- */
+
+/* Botón Primario (Guardar/Actualizar) */
+.btn-primary {
+  padding: 10px 18px;
+  background-color: var(--azul-dark);
+  color: var(--blanco);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  margin-top: 15px;
+  display: block; /* Para que ocupen todo el ancho si están solos */
+  width: 100%;
+}
+
+.btn-primary:hover {
+  background-color: var(--celeste);
+  color: var(--azul);
+}
+
+/* Botón Secundario (Cancelar) */
+.btn-secondary {
+  padding: 10px 18px;
+  background-color: #e0e0e0;
+  color: #333;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: bold;
+  transition: background-color 0.2s;
+  margin-top: 10px;
+  display: block;
+  width: 100%;
+}
+
+.btn-secondary:hover {
+  background-color: #cccccc;
+}
+
+/* --- Animación de entrada --- */
+@keyframes animatetop {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* ==============================================
+   ESTILOS MODERNOS PARA DATOS DE PERFIL
+   ============================================== */
+
+.perfil-datos-moderno {
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 0 10px; /* Pequeño padding lateral */
+}
+
+.data-field {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  margin-bottom: 15px;
+  background-color: var(--blanco); /* Fondo de tarjeta blanca */
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08); /* Sombra suave */
+  border-left: 5px solid var(--celeste); /* Línea de color para destacar */
+  transition: box-shadow 0.3s ease;
+}
+
+.data-field:hover {
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); /* Sombra más fuerte al pasar el mouse */
+}
+
+.field-icon {
+  font-size: 1.5em;
+  color: var(--azul);
+  margin-right: 15px;
+  padding: 10px;
+  background-color: rgba(
+    130,
+    204,
+    221,
+    0.1
+  ); /* Fondo muy suave para el icono */
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.field-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.field-details label {
+  font-size: 0.85em;
+  color: #777;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.field-value {
+  font-size: 1.1em;
+  font-weight: 700;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* ================================
+   📱 RESPONSIVE (Tablet + Mobile)
+================================ */
+
+/* Tablets y pantallas medianas */
+@media (max-width: 900px) {
+  .sidebar {
+    width: 180px;
+    padding: 15px;
+  }
+
+  .content,
+  .perfil-container {
+    margin-left: 200px;
+    padding: 20px;
+  }
+
+  .page-title {
+    font-size: 24px;
+  }
+
+  .avatar {
+    width: 90px;
+  }
+}
+
+/* Teléfonos */
+@media (max-width: 650px) {
+  /* === Sidebar oculta === */
+  .sidebar {
+    position: fixed;
+    left: -230px; /* oculto */
+    top: 0;
+    width: 230px;
+    height: 100vh;
+    transition: left 0.3s ease;
+    z-index: 2000;
+  }
+
+  /* Sidebar visible cuando se hace toggle */
+  .sidebar.open {
+    left: 0;
+  }
+
+  /* Contenido ocupa 100% */
+  .content,
+  .perfil-container {
+    margin-left: 0;
+    width: 100%;
+    padding: 15px;
+  }
+
+  /* Títulos */
+  .page-title {
+    text-align: center;
+    font-size: 22px;
+  }
+
+  /* Tarjeta perfil */
+  .perfil-info {
+    padding: 20px;
+  }
+
+  .avatar {
+    width: 80px;
+  }
+
+  /* Campos de datos */
+  .data-field {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    padding: 12px;
+  }
+
+  .field-icon {
+    margin-bottom: 8px;
+    margin-right: 0;
+  }
+
+  /* Botones */
+  .perfil-acciones {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .editar-btn {
+    width: 100%;
+  }
+
+  /* Selector Avatares */
+  .avatar-options-grid {
+    gap: 10px;
+  }
+
+  .avatar-option {
+    width: 65px;
+    height: 65px;
+  }
+
+  /* Modales */
+  .modal-content {
+    width: 95%;
+    padding: 20px;
+    max-width: 380px;
+  }
+}
+
+/* ================================
+   📱 BOTÓN MENÚ PARA CELULAR
+================================ */
+.menu-btn {
+  display: none; /* oculto en desktop */
+}
+
+@media (max-width: 767px) {
+  .menu-btn {
+    display: block;
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    z-index: 3000;
+    font-size: 28px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+  }
+}
+/* ======= SIDEBAR DESPLEGABLE DESDE ARRIBA (MÓVILES) ======= */
+@media (max-width: 767px) {
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; /* Ahora ocupa ancho completo */
+    height: auto; /* ¡Ya no es 100vh! Se ajusta a su contenido */
+    max-height: 0; /* Oculto al inicio */
+    overflow: hidden;
+    transition: max-height 0.35s ease;
+    padding: 0; /* Se ajusta mejor */
+    box-shadow: none;
+    border-bottom: 4px solid var(--celeste);
+  }
+
+  /* Cuando está abierto */
+  .sidebar.open {
+    max-height: 500px; /* Ajustá según el contenido */
+    padding: 20px;
+  }
+
+  /* Ajustes internos */
+  .sidebar nav a {
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  .logo {
+    font-size: 20px;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+
+  /* El contenido ya no corre hacia la derecha */
+  .content {
+    margin-left: 0;
+    padding-top: 70px; /* opcional si querés espacio debajo del botón */
+  }
+}

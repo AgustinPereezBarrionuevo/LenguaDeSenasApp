@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Recursos</title>
+    <link rel="icon" type="image/png" href="assets/Favicon/Logo-LSA.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/mis-recursos.css">
+</head>
+<body>
+
+     <button id="toggleMenu" class="menu-btn">☰</button>
+    <aside class="sidebar">
+        <h2 class="logo">Docente</h2>
+        <nav>
+            <a href="dashboard-docente.html">Panel</a>  
+            <a href="mis-recursos.html" class="active">Mis Recursos</a>
+            <a href="subir-recursos.html">Subir Recurso</a>
+            <a href="perfil.html">Mi Perfil</a>
+            <a href="index.html" class="nav-item">Volver al Inicio</a> 
+            <a href="#" id="logout">Cerrar Sesión</a>
+        </nav>
+    </aside>
+
+
+    <main class="content">
+        <h1>Mis Recursos Didácticos</h1>
+        <button class="btn-crear" id="btnNuevoRecurso">+ Crear Recurso</button>
+
+        <div id="listaMisRecursos" class="card-container">
+         
+        </div>
+    </main>
+
+    <script src="js/mis-recursos.js" type="module"></script>
+     <script src="js/logout.js" type="module"></script>
+</body>
+</html>

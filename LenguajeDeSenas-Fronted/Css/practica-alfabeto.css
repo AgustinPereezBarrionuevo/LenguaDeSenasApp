@@ -1,0 +1,263 @@
+:root {
+    --azul-oscuro: #003366;
+    --celeste: #4db8ff;
+    --celeste-claro: #e6f6ff;
+    --blanco: #ffffff;
+    --gris: #f2f2f2;
+    --transicion: 0.3s ease;
+}
+
+body {
+    font-family: "Quicksand", Helvetica, sans-serif;
+    background: var(--gris);
+    margin: 0;
+    padding: 0;
+    background: #0e4d69;
+    background: linear-gradient(171deg, rgba(255, 255, 255, 1) 1%, rgb(30, 121, 116) 60%, rgba(14, 78, 105, 0.979) 77%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 30px;
+}
+
+h1 {
+    color: var(--azul-oscuro);
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+p {
+    font-weight: bold;
+}
+
+.card {
+    background: var(--blanco);
+    padding: 25px;
+    border-radius: 14px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#letra-titulo {
+    font-size: 42px;
+    font-weight: bold;
+    color: var(--azul-oscuro);
+}
+
+video {
+    width: 700px;
+    border-radius: 12px;
+    margin-top: 10px;
+    border: 3px solid var(--azul-oscuro);
+
+}
+
+.controles {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+button {
+    background: var(--azul-oscuro);
+    color: white;
+    border: none;
+    padding: 13px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: var(--transicion);
+}
+
+button:hover {
+    background: var(--celeste);
+}
+
+#btn-examen {
+    display: block;
+    margin: 20px auto;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.hidden {
+    display: none !important;
+}
+
+#quiz-opciones button {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+}
+
+
+
+
+
+
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.55);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.modal-box {
+    background: var(--blanco);
+    padding: 30px;
+    width: 350px;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.modal-box h2 {
+    color: var(--azul-oscuro);
+    margin-bottom: 10px;
+}
+
+.modal-box p {
+    font-size: 18px;
+    margin: 5px 0 15px;
+}
+
+.modal-box button {
+    width: 100%;
+    margin-top: 10px;
+    padding: 12px;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    background: var(--azul-oscuro);
+    color: white;
+    border: none;
+}
+
+.modal-box button:hover {
+    background: var(--celeste);
+}
+
+.volver-panel {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    background: var(--azul-oscuro);
+    color: white;
+    padding: 10px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
+    z-index: 9999;
+    transition: var(--transicion);
+}
+
+.volver-panel:hover {
+    background: var(--celeste);
+}
+
+
+
+
+
+/* 1. Contenedor Principal del Quiz */
+#quiz-section {
+    /* Centra el texto y los elementos */
+    text-align: center;
+
+    /* Agregamos el estilo de tarjeta (Card) que ya tienes */
+    background: var(--blanco);
+    padding: 25px;
+    border-radius: 14px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* 2. Estilo de la Pregunta (Texto) */
+#quiz-pregunta {
+    font-size: 22px;
+    color: var(--azul-oscuro);
+    margin-top: 0;
+    margin-bottom: 25px;
+    font-weight: 600;
+    /* Lo hacemos un poco más audaz */
+}
+
+/* 3. Estilo de la IMAGEN de la Seña */
+#quiz-video {
+
+    width: 180px;
+    height: 180px;
+
+    display: block;
+    margin: 0 auto 30px auto;
+    /* Centrar y agregar margen inferior */
+    /* Le damos un borde para destacarla */
+    border: 5px solid var(--celeste);
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 51, 102, 0.2);
+    /* Sombra suave azul */
+    transition: transform var(--transicion);
+}
+
+/* 4. Contenedor de Opciones */
+#quiz-opciones {
+    max-width: 500px;
+    /* Limitamos el ancho del contenedor de botones */
+    margin: 20px auto;
+    /* Centramos el contenedor */
+    display: flex;
+    flex-direction: column;
+    /* Apilamos los botones verticalmente */
+    gap: 12px;
+    /* Espacio entre botones */
+}
+
+/* 5. Estilo de los Botones de Opción (Mejorado) */
+#quiz-opciones button {
+    /* Hereda tu estilo base de botón */
+    font-size: 20px;
+    /* Un poco más grandes */
+    font-weight: bold;
+    text-transform: uppercase;
+
+    /* Mejoramos el padding y el border-radius para que se vea más moderno */
+    padding: 15px 25px;
+    border-radius: 8px;
+
+    /* Aseguramos que la transición sea suave */
+    transition: background-color var(--transicion), box-shadow var(--transicion), transform var(--transicion);
+}
+
+#quiz-opciones button:hover {
+    background: var(--celeste);
+    color: var(--azul-oscuro);
+    /* Cambiamos el color del texto al pasar el ratón */
+    transform: translateY(-2px);
+    /* Pequeño efecto de levantamiento */
+    box-shadow: 0 6px 15px rgba(0, 51, 102, 0.3);
+}
+
+/* 6. Estilo del Resultado (Feedback) */
+#quiz-resultado {
+    font-size: 18px;
+    color: var(--azul-oscuro);
+    font-weight: bold;
+    margin-top: 20px;
+}

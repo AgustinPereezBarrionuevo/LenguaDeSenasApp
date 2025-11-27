@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Perfil</title>
+    <link rel="icon" type="image/png" href="assets/Favicon/Logo-LSA.png">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/perfil.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"> 
+</head>
+<body>
+    <button id="toggleMenu" class="menu-btn">☰</button>
+    <aside class="sidebar">
+        <h2 class="logo" id="rolDisplay"></h2> <nav>
+            <a href="dashboard-alumno.html" class="nav-item"></i> Panel</a>
+            <a href="mis-recursos.html" class="nav-item solo-docente"><i class="fa-solid fa-folder-open"></i> Mis Recursos</a>
+            <a href="subir-recursos.html" class="nav-item solo-docente"><i class="fa-solid fa-upload"></i> Subir Recurso</a>           
+            <a href="dashboard-recursos.html" class="nav-item solo-alumno"></i>Recursos</a> 
+            <a href="perfil.html" class="nav-item active"></i> Mi Perfil</a> 
+            <a href="index.html" class="nav-item">Volver al Inicio</a> 
+            <a href="index.html" id="logout" class="nav-item"></i> Cerrar Sesión</a>
+        </nav>
+    </aside>
+
+    
+
+   <div class="perfil-container">
+
+            <h1 class="page-title">Mi Perfil</h1>
+
+            <section class="perfil-info">
+    <img src="assets/avatares/Avatar1.png" class="avatar" alt="Avatar">
+
+    <h2 id="nombreUsuario">Usuario</h2>         
+    <p style="display: none;">Rol: <span id="rolUsuario"></span></p> 
+
+    <div class="perfil-datos-moderno">
+        
+        <div class="data-field">
+            <span class="field-icon"><i class="fa-solid fa-user"></i></span>
+            <div class="field-details">
+                <label>Nombre de Usuario</label>
+                <p class="field-value" id="nombreUsuarioDisplay"></p>
+            </div>
+        </div>
+
+        <div class="data-field">
+            <span class="field-icon"><i class="fa-solid fa-envelope"></i></span>
+            <div class="field-details">
+                <label>Correo Electrónico</label>
+                <p class="field-value" id="emailUsuarioDisplay"></p>
+            </div>
+        </div>
+
+    </div>
+    <div class="perfil-acciones">
+        <button class="editar-btn" id="btnEditarPerfil">Editar Perfil</button>
+        <button class="editar-btn" id="btnCambiarPassword">Cambiar Contraseña</button>
+    </div>
+</section>
+            
+            <section class="panel">
+                <h3>Selecciona tu Avatar</h3>
+                <div id="avatarSelectorContainer" class="avatar-options-grid"></div>
+                <button class="editar-btn" id="btnGuardarAvatar" style="margin-top: 20px;">Guardar Avatar Seleccionado</button>
+            </section>
+            
+        </div> </main> <div id="modalPerfil" class="modal">
+        <div class="modal-content">
+            <span class="close-button close-perfil">&times;</span>
+            <h2>Editar Información del Perfil</h2>
+
+            <form id="formPerfilModal"> 
+                <div class="form-field">
+                    <label for="inputNombreModal">Nombre Completo</label>
+                    <input type="text" id="inputNombreModal" required placeholder="Ingrese su nuevo nombre">
+                </div>
+                
+                <div class="form-field">
+                    <label for="inputEmailModal">Email</label>
+                    <input type="email" id="inputEmailModal" required placeholder="Ingrese su nuevo email">
+                </div>
+
+                <button type="submit" class="btn-primary">Guardar Cambios</button>
+                <button type="button" class="btn-secondary" id="cancelarPerfil">Cancelar</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="modalPassword" class="modal">
+        <div class="modal-content">
+            <span class="close-button close-password">&times;</span>
+            <h2>Cambiar Contraseña</h2>
+
+            <form id="formPasswordModal"> 
+                
+                <div class="form-field">
+                    <label for="inputPasswordActualModal">Contraseña Actual</label>
+                    <input type="password" id="inputPasswordActualModal" required placeholder="Verifique su contraseña actual">
+                </div>
+                
+                <div class="form-field">
+                    <label for="inputPasswordNuevaModal">Nueva Contraseña</label>
+                    <input type="password" id="inputPasswordNuevaModal" required placeholder="Ingrese la nueva contraseña">
+                </div>
+
+                <div class="form-field">
+                    <label for="inputPasswordConfirmarModal">Confirmar Nueva Contraseña</label>
+                    <input type="password" id="inputPasswordConfirmarModal" required placeholder="Confirme la nueva contraseña">
+                </div>
+                
+                <button type="submit" class="btn-primary">Actualizar Contraseña</button>
+                <button type="button" class="btn-secondary" id="cancelarPassword">Cancelar</button>
+            </form>
+        </div>
+    </div>
+
+
+    <script src="js/logout.js"></script> 
+    <script src="js/utils.js" type="module"></script> 
+    <script src="js/perfil.js"></script>
+</body>
+
+</html>

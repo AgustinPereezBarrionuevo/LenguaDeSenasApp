@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Práctica del Abecedario LSA</title>
+    <link rel="icon" type="image/png" href="assets/Favicon/Logo-LSA.png">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Css/practica-alfabeto.css">
+</head>
+<body>
+
+    <a href="dashboard-alumno.html" id="btn-volver-panel" class="volver-panel">
+    ⬅ Volver
+</a>
+
+
+    <section class="container">
+        <h1>Práctica del Abecedario en LSA</h1>
+        <p>Aprendé cada letra de forma individual.</p>
+
+        <div id="aprendizaje-card" class="card">
+            <h2 id="letra-titulo">A</h2>
+
+            <video id="video-letra" autoplay muted ></video>
+
+            <div class="controles">
+                <button id="btn-anterior">Anterior</button>
+                <button id="btn-repetir">Repetir</button>
+                <button id="btn-siguiente">Siguiente</button>
+            </div>
+        </div>
+
+ 
+        <button id="btn-examen">Iniciar Examen Final</button>
+
+
+        <section id="quiz-section" class="hidden">
+            <button id="btn-volver-practica" style="margin-bottom: 20px;">Volver a Practicar</button>
+            <h2 id="quiz-pregunta"></h2>
+           <img id="quiz-video" alt="Seña de la pregunta" style="max-width: 100%; height: auto;">
+            
+
+            <div id="quiz-opciones"></div>
+
+            <p id="quiz-resultado"></p>
+        </section>
+
+
+<div id="modal-overlay" class="modal-overlay hidden">
+    <div class="modal-box">
+        <h2 id="modal-titulo"></h2>
+        <p id="modal-mensaje"></p>
+        <p id="modal-puntaje"></p>
+
+        <button id="btn-reintentar">Reintentar examen</button>
+        <button id="btn-volver">Volver a practicar</button>
+    </div>
+</div>
+
+    </section>
+
+    <script src="js/practica-alfabeto.js" type="module"></script>
+</body>
+</html>
