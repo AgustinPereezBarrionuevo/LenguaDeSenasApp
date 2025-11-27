@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\Jose_\\OneDrive\\Escritorio\\ProyectoFinalTesis\\ApiLenguajeDeSenas\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C2164703-4C1F-4D90-ADF3-4D7C14887C68}|ApiLenguajeDeSenas.csproj|c:\\users\\jose_\\onedrive\\escritorio\\proyectofinaltesis\\apilenguajedesenas\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C2164703-4C1F-4D90-ADF3-4D7C14887C68}|ApiLenguajeDeSenas.csproj|solutionrelative:models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C2164703-4C1F-4D90-ADF3-4D7C14887C68}|ApiLenguajeDeSenas.csproj|c:\\users\\jose_\\onedrive\\escritorio\\proyectofinaltesis\\apilenguajedesenas\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C2164703-4C1F-4D90-ADF3-4D7C14887C68}|ApiLenguajeDeSenas.csproj|solutionrelative:controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2164703-4C1F-4D90-ADF3-4D7C14887C68}|ApiLenguajeDeSenas.csproj|c:\\users\\jose_\\onedrive\\escritorio\\proyectofinaltesis\\apilenguajedesenas\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2164703-4C1F-4D90-ADF3-4D7C14887C68}|ApiLenguajeDeSenas.csproj|solutionrelative:models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C2164703-4C1F-4D90-ADF3-4D7C14887C68}|ApiLenguajeDeSenas.csproj|c:\\users\\jose_\\onedrive\\escritorio\\proyectofinaltesis\\apilenguajedesenas\\services\\recursodidacticoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -90,7 +90,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 10,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -114,8 +114,7 @@
               "RelativeToolTip": "Controllers\\RecursosDidacticosController.cs",
               "ViewState": "AgIAABQAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-13T18:27:58.974Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-13T18:27:58.974Z"
             },
             {
               "$type": "Document",
@@ -127,8 +126,7 @@
               "RelativeToolTip": "Controllers\\DocenteController.cs",
               "ViewState": "AgIAAEMAAAAAAAAAAADwv2wAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-13T18:27:47.427Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-13T18:27:47.427Z"
             },
             {
               "$type": "Document",
@@ -140,8 +138,7 @@
               "RelativeToolTip": "Services\\DocenteService.cs",
               "ViewState": "AgIAABwAAAAAAAAAAADwvzUAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-13T18:34:30.446Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-13T18:34:30.446Z"
             },
             {
               "$type": "Document",
@@ -153,8 +150,7 @@
               "RelativeToolTip": "Controllers\\UsuarioController.cs",
               "ViewState": "AgIAACQAAAAAAAAAAADwv00AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-13T18:05:26.554Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-13T18:05:26.554Z"
             },
             {
               "$type": "Document",
@@ -166,8 +162,7 @@
               "RelativeToolTip": "Models\\RecursoDidactico.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-13T18:25:47.195Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-13T18:25:47.195Z"
             },
             {
               "$type": "Document",
@@ -179,25 +174,24 @@
               "RelativeToolTip": "Services\\RecursoDidacticoService.cs",
               "ViewState": "AgIAACsAAAAAAAAAAADwv0oAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-13T18:34:55.916Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-13T18:34:55.916Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "AuthController.cs",
               "DocumentMoniker": "C:\\Users\\Jose_\\OneDrive\\Escritorio\\ProyectoFinalTesis\\ApiLenguajeDeSenas\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "Controllers\\AuthController.cs",
-              "ToolTip": "C:\\Users\\Jose_\\OneDrive\\Escritorio\\ProyectoFinalTesis\\ApiLenguajeDeSenas\\Controllers\\AuthController.cs*",
-              "RelativeToolTip": "Controllers\\AuthController.cs*",
-              "ViewState": "AgIAAAkAAAAAAAAAAADgvx4AAAAiAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\Jose_\\OneDrive\\Escritorio\\ProyectoFinalTesis\\ApiLenguajeDeSenas\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "Controllers\\AuthController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-13T22:54:22.267Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Usuario.cs",
               "DocumentMoniker": "C:\\Users\\Jose_\\OneDrive\\Escritorio\\ProyectoFinalTesis\\ApiLenguajeDeSenas\\Models\\Usuario.cs",
               "RelativeDocumentMoniker": "Models\\Usuario.cs",
@@ -205,8 +199,7 @@
               "RelativeToolTip": "Models\\Usuario.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-13T18:03:59.851Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-13T18:03:59.851Z"
             },
             {
               "$type": "Document",
@@ -218,8 +211,7 @@
               "RelativeToolTip": "appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAB8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-11-13T18:43:14.816Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-13T18:43:14.816Z"
             },
             {
               "$type": "Document",

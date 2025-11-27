@@ -273,3 +273,4 @@ C:\Users\usuario\Desktop\python\ProyectoFinalTesis\ApiLenguajeDeSenas\obj\Debug\
 C:\Users\usuario\Desktop\python\ProyectoFinalTesis\ApiLenguajeDeSenas\obj\Debug\net8.0\ApiLenguajeDeSenas.pdb
 C:\Users\usuario\Desktop\python\ProyectoFinalTesis\ApiLenguajeDeSenas\obj\Debug\net8.0\ApiLenguajeDeSenas.genruntimeconfig.cache
 C:\Users\usuario\Desktop\python\ProyectoFinalTesis\ApiLenguajeDeSenas\obj\Debug\net8.0\ref\ApiLenguajeDeSenas.dll
+C:\Users\Jose_\OneDrive\Escritorio\ProyectoFinalTesis\ApiLenguajeDeSenas\obj\Debug\net8.0\ApiLenguajeDeSenas.sourcelink.json
