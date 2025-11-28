@@ -198,26 +198,126 @@ footer {
   margin-left: 270px;
 }
 
-/* =====================================================
-   📱 RESPONSIVE COMPLETO PARA EL CONTENIDO (<=767px)
-===================================================== */
+/* ============================================================
+   📱 RESPONSIVE DESIGN - PROFESSIONAL
+============================================================ */
+
+/* Menu Toggle Button */
+.menu-btn {
+  display: none;
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  z-index: 3000;
+  font-size: 28px;
+  background: var(--azul);
+  border: 2px solid var(--celeste);
+  color: var(--blanco);
+  cursor: pointer;
+  padding: 8px 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px var(--sombra);
+  transition: 0.3s;
+}
+
+.menu-btn:hover {
+  background: var(--celeste);
+  color: var(--azul);
+}
+
+/* ===========================
+   TABLETS (992px - 768px)
+   ===========================*/
+@media (max-width: 992px) {
+  .sidebar {
+    width: 200px;
+    padding: 15px;
+  }
+
+  .dashboard-header {
+    margin-left: 230px;
+  }
+
+  .content-main {
+    margin-left: 230px;
+    padding: 30px 20px;
+  }
+
+  .recurso-card {
+    width: calc(50% - 15px);
+    min-width: 280px;
+  }
+}
+
+/* ===========================
+   MOBILE (767px and below)
+   ===========================*/
 @media (max-width: 767px) {
-  /* ----------- CONTENEDOR PRINCIPAL ----------- */
+  /* Show menu button */
+  .menu-btn {
+    display: block;
+  }
+
+  /* SIDEBAR - Slide from left */
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 70%;
+    max-width: 280px;
+    height: 100vh;
+    z-index: 2500;
+    transition: left 0.3s ease;
+    box-shadow: 5px 0 15px rgba(0, 0, 0, 0.3);
+    overflow-y: auto;
+  }
+
+  .sidebar.open {
+    left: 0;
+  }
+
+  .logo {
+    font-size: 20px;
+    margin-bottom: 20px;
+    padding-top: 10px;
+  }
+
+  .sidebar-nav .nav-item {
+    font-size: 15px;
+    padding: 12px;
+  }
+
+  /* HEADER */
+  .dashboard-header {
+    margin-left: 0;
+    padding: 15px 20px;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .dashboard-header .logo {
+    font-size: 20px;
+  }
+
+  .user-info {
+    font-size: 14px;
+  }
+
+  /* CONTENT */
   .dashboard-wrapper {
     flex-direction: column;
   }
 
   .content-main {
-    margin-left: 0 !important; /* antes ocupaba 270px */
-    padding: 20px 15px;
+    margin-left: 0;
+    padding: 70px 20px 20px;
     width: 100%;
   }
 
-  /* ----------- TITULOS Y TEXTOS ----------- */
   h1 {
     font-size: 24px;
     text-align: center;
-    margin-top: 40px;
+    margin-top: 20px;
   }
 
   .subtitulo {
@@ -226,16 +326,17 @@ footer {
     margin-bottom: 25px;
   }
 
-  /* ----------- CONTENEDOR DE CARDS ----------- */
+  /* CARDS */
   .card-container {
     justify-content: center;
     gap: 15px;
+    flex-direction: column;
+    align-items: center;
   }
 
-  /* ----------- TARJETAS DE RECURSOS ----------- */
   .recurso-card {
     width: 100%;
-    max-width: 340px;
+    max-width: 400px;
     padding: 20px;
   }
 
@@ -259,73 +360,89 @@ footer {
     font-size: 0.95em;
   }
 
-  /* ----------- FOOTER ----------- */
+  /* FOOTER */
   footer {
-    margin-left: 0 !important;
+    margin-left: 0;
     margin-top: 30px;
     font-size: 14px;
     padding: 12px;
   }
 }
 
-/* ================================
-   📱 BOTÓN MENÚ PARA CELULAR
-================================ */
-.menu-btn {
-  display: none; /* oculto en desktop */
-}
-
-@media (max-width: 767px) {
+/* ===========================
+   SMALL MOBILE (480px)
+   ===========================*/
+@media (max-width: 480px) {
   .menu-btn {
-    display: block;
-    position: absolute;
+    font-size: 24px;
+    padding: 6px 12px;
     top: 12px;
     left: 12px;
-    z-index: 3000;
-    font-size: 28px;
-    background: none;
-    border: none;
-    color: white;
-    cursor: pointer;
+  }
+
+  .sidebar {
+    width: 75%;
+    max-width: 250px;
+    padding: 15px;
+  }
+
+  .content-main {
+    padding: 65px 15px 15px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  .subtitulo {
+    font-size: 14px;
+  }
+
+  .recurso-card {
+    padding: 18px;
+  }
+
+  .recurso-card h3 {
+    font-size: 1.1em;
+  }
+
+  .recurso-card p {
+    font-size: 0.9em;
+  }
+
+  .btn-ver {
+    padding: 8px 12px;
+    font-size: 0.9em;
+  }
+
+  footer {
+    font-size: 13px;
+    padding: 10px;
   }
 }
 
-/* ======= SIDEBAR DESPLEGABLE DESDE ARRIBA (MÓVILES) ======= */
-@media (max-width: 767px) {
-  .sidebar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%; /* Ahora ocupa ancho completo */
-    height: auto; /* ¡Ya no es 100vh! Se ajusta a su contenido */
-    max-height: 0; /* Oculto al inicio */
-    overflow: hidden;
-    transition: max-height 0.35s ease;
-    padding: 0; /* Se ajusta mejor */
-    box-shadow: none;
-    border-bottom: 4px solid var(--celeste);
+/* ===========================
+   VERY SMALL DEVICES (360px)
+   ===========================*/
+@media (max-width: 360px) {
+  .menu-btn {
+    font-size: 22px;
+    padding: 5px 10px;
   }
 
-  /* Cuando está abierto */
-  .sidebar.open {
-    max-height: 500px; /* Ajustá según el contenido */
+  .content-main {
+    padding: 60px 10px 10px;
   }
 
-  /* Ajustes internos */
-  .sidebar nav a {
-    font-size: 16px;
-    padding: 10px;
+  h1 {
+    font-size: 18px;
   }
 
-  .logo {
-    font-size: 20px;
-    margin-bottom: 15px;
-    text-align: center;
+  .recurso-card {
+    padding: 15px;
   }
 
-  /* El contenido ya no corre hacia la derecha */
-  .content {
-    margin-left: 0;
-    padding-top: 70px; /* opcional si querés espacio debajo del botón */
+  .recurso-card h3 {
+    font-size: 1em;
   }
 }

@@ -440,50 +440,309 @@ table td {
 
 
 
-/* ======= SIDEBAR DESPLEGABLE DESDE ARRIBA (MÓVILES) ======= */
-@media (max-width: 767px) {
+/* ============================================================
+   📱 RESPONSIVE DESIGN - PROFESSIONAL
+============================================================ */
 
+/* Menu Toggle Button */
+.menu-btn {
+    display: none;
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    z-index: 3000;
+    font-size: 28px;
+    background: var(--azul);
+    border: 2px solid var(--celeste);
+    color: var(--blanco);
+    cursor: pointer;
+    padding: 8px 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px var(--sombra);
+    transition: 0.3s;
+}
+
+.menu-btn:hover {
+    background: var(--celeste);
+    color: var(--azul);
+}
+
+/* ===========================
+   TABLETS (992px - 768px)
+   ===========================*/
+@media (max-width: 992px) {
+    .sidebar {
+        width: 200px;
+        padding: 15px;
+    }
+
+    .sidebar .logo {
+        font-size: 20px;
+        margin-bottom: 25px;
+    }
+
+    .sidebar nav a {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .content {
+        margin-left: 230px;
+        padding: 25px;
+    }
+
+    .cards {
+        flex-wrap: wrap;
+    }
+
+    .card {
+        min-width: 200px;
+        flex: 1 1 calc(50% - 20px);
+    }
+}
+
+/* ===========================
+   MOBILE (767px and below)
+   ===========================*/
+@media (max-width: 767px) {
+    html, body {
+        overflow-x: hidden;
+        width: 100%;
+    }
+
+    /* Show menu button */
+    .menu-btn {
+        display: block;
+    }
+
+    /* SIDEBAR - Slide from left */
     .sidebar {
         position: fixed;
         top: 0;
-        left: 0;
-        width: 100%;
-        /* Ahora ocupa ancho completo */
-        height: auto;
-        /* ¡Ya no es 100vh! Se ajusta a su contenido */
-        max-height: 0;
-        /* Oculto al inicio */
-        overflow: hidden;
-        transition: max-height 0.35s ease;
-        padding: 0;
-        /* Se ajusta mejor */
-        box-shadow: none;
-        border-bottom: 4px solid var(--celeste);
-    }
-
-    /* Cuando está abierto */
-    .sidebar.open {
-        max-height: 500px;
-        /* Ajustá según el contenido */
+        left: -100%;
+        width: 70%;
+        max-width: 280px;
+        height: 100vh;
+        z-index: 2500;
+        transition: left 0.3s ease;
+        box-shadow: 5px 0 15px rgba(0, 0, 0, 0.3);
+        overflow-y: auto;
         padding: 20px;
     }
 
-    /* Ajustes internos */
-    .sidebar nav a {
-        font-size: 16px;
-        padding: 10px;
+    .sidebar.open {
+        left: 0;
     }
 
-    .logo {
+    .sidebar .logo {
+        text-align: center;
+        margin: 20px 0;
         font-size: 20px;
-        margin-bottom: 15px;
+        padding-top: 10px;
+    }
+
+    .sidebar nav a {
+        font-size: 15px;
+        padding: 12px 15px;
+    }
+
+    /* CONTENT - Full width */
+    .content {
+        margin-left: 0;
+        padding: 70px 20px 20px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    header h1 {
+        font-size: 24px;
         text-align: center;
     }
 
-    /* El contenido ya no corre hacia la derecha */
+    /* CARDS */
+    .cards {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    /* TABLES */
+    .tabla-section {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .tabla-section table {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    table th,
+    table td {
+        padding: 10px 8px;
+        font-size: 14px;
+    }
+
+    /* FORMS */
+    .form-section {
+        margin-top: 30px;
+    }
+
+    .form-section input,
+    .form-section button {
+        padding: 12px;
+        font-size: 16px; /* Prevents zoom on iOS */
+    }
+
+    /* MODAL */
+    .modal {
+        padding-top: 20px;
+    }
+
+    .modal-content {
+        width: 95%;
+        margin: 10% auto;
+        padding: 20px;
+    }
+
+    .modal-content h2 {
+        font-size: 20px;
+    }
+
+    .form-group-row {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .form-group-row .form-field {
+        width: 100%;
+    }
+
+    .autocomplete-box {
+        width: calc(100% - 40px);
+    }
+}
+
+/* ===========================
+   SMALL MOBILE (480px)
+   ===========================*/
+@media (max-width: 480px) {
+    .menu-btn {
+        font-size: 24px;
+        padding: 6px 12px;
+        top: 12px;
+        left: 12px;
+    }
+
+    .sidebar {
+        width: 75%;
+        max-width: 250px;
+        padding: 15px;
+    }
+
+    .sidebar .logo {
+        font-size: 18px;
+        margin: 15px 0;
+    }
+
+    .sidebar nav a {
+        font-size: 14px;
+        padding: 10px;
+    }
+
     .content {
-        margin-left: 0;
-        padding-top: 70px;
-        /* opcional si querés espacio debajo del botón */
+        padding: 65px 15px 15px;
+    }
+
+    header h1 {
+        font-size: 20px;
+    }
+
+    .card {
+        padding: 15px;
+    }
+
+    .card h3 {
+        font-size: 16px;
+    }
+
+    .card p {
+        font-size: 20px;
+    }
+
+    table th,
+    table td {
+        padding: 8px 6px;
+        font-size: 13px;
+    }
+
+    .btn-delete {
+        padding: 6px 10px;
+        font-size: 13px;
+    }
+
+    .modal-content {
+        width: 98%;
+        padding: 15px;
+    }
+
+    .modal-content h2 {
+        font-size: 18px;
+    }
+
+    .form-field label {
+        font-size: 0.85em;
+    }
+
+    .form-field input,
+    #formDocente select {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    #formDocente button[type="submit"] {
+        padding: 10px;
+        font-size: 1em;
+    }
+}
+
+/* ===========================
+   VERY SMALL DEVICES (360px)
+   ===========================*/
+@media (max-width: 360px) {
+    .menu-btn {
+        font-size: 22px;
+        padding: 5px 10px;
+    }
+
+    .content {
+        padding: 60px 10px 10px;
+    }
+
+    header h1 {
+        font-size: 18px;
+    }
+
+    .card {
+        padding: 12px;
+    }
+
+    table th,
+    table td {
+        padding: 6px 4px;
+        font-size: 12px;
+    }
+
+    .modal-content {
+        padding: 12px;
+    }
+
+    .close-button {
+        font-size: 24px;
     }
 }

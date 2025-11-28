@@ -149,6 +149,133 @@ button:hover {
     border: none;
 }
 
+/* ============================================================
+   📱 RESPONSIVE DESIGN
+============================================================ */
+
+/* Tablets */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    #letra-titulo {
+        font-size: 36px;
+    }
+
+    video {
+        width: 100%;
+        max-width: 600px;
+    }
+
+    button {
+        padding: 12px 18px;
+        font-size: 15px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 24px;
+        line-height: 1.3;
+    }
+
+    #letra-titulo {
+        font-size: 32px;
+    }
+
+    video {
+        width: 100%;
+        border: 2px solid var(--azul-oscuro);
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    .controles {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+
+    button {
+        width: 100%;
+        padding: 14px;
+        font-size: 15px;
+    }
+
+    #btn-examen {
+        font-size: 16px;
+        padding: 14px;
+    }
+
+    #quiz-opciones button {
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    .modal-box {
+        width: 90%;
+        max-width: 320px;
+        padding: 25px 20px;
+    }
+
+    .modal-box h2 {
+        font-size: 22px;
+    }
+
+    .modal-box p {
+        font-size: 16px;
+    }
+}
+
+/* Very Small Devices */
+@media (max-width: 360px) {
+    .container {
+        padding: 12px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    #letra-titulo {
+        font-size: 28px;
+    }
+
+    .card {
+        padding: 15px;
+    }
+
+    button {
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    .modal-box {
+        width: 95%;
+        padding: 20px 15px;
+    }
+
+    .modal-box h2 {
+        font-size: 20px;
+    }
+
+    .modal-box p {
+        font-size: 15px;
+    }
+}
+
 .modal-box button:hover {
     background: var(--celeste);
 }

@@ -1,0 +1,521 @@
+/* ============================================================
+   🎯 RESPONSIVE UTILITIES - CLASES REUTILIZABLES
+   Archivo de utilidades para responsive design
+============================================================ */
+
+:root {
+  /* Breakpoints */
+  --breakpoint-xs: 360px;
+  --breakpoint-sm: 480px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+}
+
+/* ============================================================
+   DISPLAY UTILITIES
+============================================================ */
+
+/* Hide on mobile */
+.hide-mobile {
+  display: block;
+}
+
+@media (max-width: 767px) {
+  .hide-mobile {
+    display: none !important;
+  }
+}
+
+/* Show only on mobile */
+.show-mobile {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .show-mobile {
+    display: block !important;
+  }
+}
+
+/* Hide on tablet */
+.hide-tablet {
+  display: block;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .hide-tablet {
+    display: none !important;
+  }
+}
+
+/* Show only on tablet */
+.show-tablet {
+  display: none;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .show-tablet {
+    display: block !important;
+  }
+}
+
+/* Hide on desktop */
+.hide-desktop {
+  display: block;
+}
+
+@media (min-width: 992px) {
+  .hide-desktop {
+    display: none !important;
+  }
+}
+
+/* Show only on desktop */
+.show-desktop {
+  display: none;
+}
+
+@media (min-width: 992px) {
+  .show-desktop {
+    display: block !important;
+  }
+}
+
+/* ============================================================
+   TEXT ALIGNMENT
+============================================================ */
+
+/* Mobile text alignment */
+@media (max-width: 767px) {
+  .text-center-mobile {
+    text-align: center !important;
+  }
+
+  .text-left-mobile {
+    text-align: left !important;
+  }
+
+  .text-right-mobile {
+    text-align: right !important;
+  }
+}
+
+/* ============================================================
+   SPACING UTILITIES
+============================================================ */
+
+/* Padding adjustments for mobile */
+@media (max-width: 767px) {
+  .p-mobile-0 {
+    padding: 0 !important;
+  }
+
+  .p-mobile-10 {
+    padding: 10px !important;
+  }
+
+  .p-mobile-15 {
+    padding: 15px !important;
+  }
+
+  .p-mobile-20 {
+    padding: 20px !important;
+  }
+
+  .px-mobile-10 {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+
+  .px-mobile-15 {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+
+  .py-mobile-10 {
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+  }
+
+  .py-mobile-15 {
+    padding-top: 15px !important;
+    padding-bottom: 15px !important;
+  }
+}
+
+/* Margin adjustments for mobile */
+@media (max-width: 767px) {
+  .m-mobile-0 {
+    margin: 0 !important;
+  }
+
+  .m-mobile-10 {
+    margin: 10px !important;
+  }
+
+  .m-mobile-15 {
+    margin: 15px !important;
+  }
+
+  .m-mobile-auto {
+    margin: 0 auto !important;
+  }
+
+  .mx-mobile-auto {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .mt-mobile-10 {
+    margin-top: 10px !important;
+  }
+
+  .mt-mobile-20 {
+    margin-top: 20px !important;
+  }
+
+  .mb-mobile-10 {
+    margin-bottom: 10px !important;
+  }
+
+  .mb-mobile-20 {
+    margin-bottom: 20px !important;
+  }
+}
+
+/* ============================================================
+   WIDTH UTILITIES
+============================================================ */
+
+/* Full width on mobile */
+@media (max-width: 767px) {
+  .w-mobile-100 {
+    width: 100% !important;
+  }
+
+  .w-mobile-auto {
+    width: auto !important;
+  }
+
+  .max-w-mobile-100 {
+    max-width: 100% !important;
+  }
+}
+
+/* ============================================================
+   FLEXBOX UTILITIES
+============================================================ */
+
+/* Flex direction on mobile */
+@media (max-width: 767px) {
+  .flex-column-mobile {
+    flex-direction: column !important;
+  }
+
+  .flex-row-mobile {
+    flex-direction: row !important;
+  }
+
+  .justify-center-mobile {
+    justify-content: center !important;
+  }
+
+  .align-center-mobile {
+    align-items: center !important;
+  }
+
+  .flex-wrap-mobile {
+    flex-wrap: wrap !important;
+  }
+}
+
+/* ============================================================
+   GRID UTILITIES
+============================================================ */
+
+/* Responsive grid columns */
+.grid-responsive {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+@media (max-width: 767px) {
+  .grid-responsive {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+}
+
+.grid-2-cols {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+@media (max-width: 767px) {
+  .grid-2-cols {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+}
+
+.grid-3-cols {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+@media (max-width: 992px) {
+  .grid-3-cols {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .grid-3-cols {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+}
+
+.grid-4-cols {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+@media (max-width: 992px) {
+  .grid-4-cols {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .grid-4-cols {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+}
+
+/* ============================================================
+   FONT SIZE UTILITIES
+============================================================ */
+
+/* Responsive font sizes */
+@media (max-width: 767px) {
+  .text-small-mobile {
+    font-size: 14px !important;
+  }
+
+  .text-medium-mobile {
+    font-size: 16px !important;
+  }
+
+  .text-large-mobile {
+    font-size: 18px !important;
+  }
+}
+
+/* ============================================================
+   CONTAINER UTILITIES
+============================================================ */
+
+.container-responsive {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+@media (max-width: 767px) {
+  .container-responsive {
+    padding: 0 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container-responsive {
+    padding: 0 10px;
+  }
+}
+
+/* ============================================================
+   BUTTON UTILITIES
+============================================================ */
+
+/* Full width buttons on mobile */
+@media (max-width: 767px) {
+  .btn-mobile-full {
+    width: 100% !important;
+    display: block !important;
+  }
+}
+
+/* Stack buttons vertically on mobile */
+.btn-group-responsive {
+  display: flex;
+  gap: 10px;
+}
+
+@media (max-width: 767px) {
+  .btn-group-responsive {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .btn-group-responsive > * {
+    width: 100%;
+  }
+}
+
+/* ============================================================
+   IMAGE UTILITIES
+============================================================ */
+
+/* Responsive images */
+.img-responsive {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Center images on mobile */
+@media (max-width: 767px) {
+  .img-center-mobile {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    display: block !important;
+  }
+}
+
+/* ============================================================
+   OVERFLOW UTILITIES
+============================================================ */
+
+/* Prevent horizontal scroll */
+.no-overflow-x {
+  overflow-x: hidden !important;
+}
+
+/* Scrollable tables on mobile */
+.table-responsive {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+@media (max-width: 767px) {
+  .table-responsive table {
+    min-width: 600px;
+  }
+}
+
+/* ============================================================
+   VISIBILITY UTILITIES
+============================================================ */
+
+/* Breakpoint specific visibility */
+@media (max-width: 360px) {
+  .hide-xs {
+    display: none !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .hide-sm {
+    display: none !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .hide-md {
+    display: none !important;
+  }
+}
+
+@media (max-width: 992px) {
+  .hide-lg {
+    display: none !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  .hide-xl {
+    display: none !important;
+  }
+}
+
+/* ============================================================
+   GAP UTILITIES FOR MOBILE
+============================================================ */
+
+@media (max-width: 767px) {
+  .gap-mobile-5 {
+    gap: 5px !important;
+  }
+
+  .gap-mobile-10 {
+    gap: 10px !important;
+  }
+
+  .gap-mobile-15 {
+    gap: 15px !important;
+  }
+
+  .gap-mobile-20 {
+    gap: 20px !important;
+  }
+}
+
+/* ============================================================
+   ASPECT RATIO UTILITIES
+============================================================ */
+
+.aspect-ratio-16-9 {
+  aspect-ratio: 16 / 9;
+  width: 100%;
+}
+
+.aspect-ratio-4-3 {
+  aspect-ratio: 4 / 3;
+  width: 100%;
+}
+
+.aspect-ratio-1-1 {
+  aspect-ratio: 1 / 1;
+  width: 100%;
+}
+
+/* ============================================================
+   MOBILE OVERLAY UTILITY
+============================================================ */
+
+.mobile-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.mobile-overlay.active {
+  display: block;
+}
+
+/* ============================================================
+   PRINT UTILITIES
+============================================================ */
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+
+  .print-only {
+    display: block !important;
+  }
+}

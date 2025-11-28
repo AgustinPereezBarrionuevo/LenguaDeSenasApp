@@ -114,3 +114,150 @@
     margin-top: 10px;
     color: #0066cc; /* Un azul intermedio */
 }
+
+/* ============================================================
+   📱 RESPONSIVE DESIGN
+============================================================ */
+
+/* Tablets */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        height: auto;
+        min-height: 100vh;
+    }
+
+    .lista-frases {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .lista-frases h2 {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+
+    .lista-frases ul li {
+        padding: 10px;
+        font-size: 15px;
+    }
+
+    .visor {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .visor h2 {
+        font-size: 22px;
+    }
+
+    .visor iframe {
+        height: 400px;
+    }
+
+    #placeholderVideo {
+        height: 350px;
+        font-size: 20px;
+    }
+
+    #placeholderVideo .subtexto {
+        font-size: 14px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .lista-frases {
+        padding: 12px;
+    }
+
+    .lista-frases h2 {
+        font-size: 18px;
+        margin-bottom: 12px;
+    }
+
+    .lista-frases ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .lista-frases ul li {
+        padding: 10px;
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+
+    .visor {
+        padding: 15px;
+    }
+
+    .visor h2 {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+
+    .visor iframe {
+        height: 300px;
+        border-radius: 8px;
+    }
+
+    .link-volver {
+        width: 100%;
+        text-align: center;
+        padding: 12px;
+        font-size: 15px;
+        display: block;
+    }
+
+    #placeholderVideo {
+        height: 280px;
+        font-size: 18px;
+        border: 2px dashed var(--azul-oscuro);
+    }
+
+    #placeholderVideo .subtexto {
+        font-size: 13px;
+    }
+}
+
+/* Very Small Devices */
+@media (max-width: 360px) {
+    .lista-frases {
+        padding: 10px;
+    }
+
+    .lista-frases h2 {
+        font-size: 16px;
+    }
+
+    .lista-frases ul li {
+        padding: 8px;
+        font-size: 13px;
+    }
+
+    .visor {
+        padding: 12px;
+    }
+
+    .visor h2 {
+        font-size: 18px;
+    }
+
+    .visor iframe {
+        height: 250px;
+    }
+
+    .link-volver {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    #placeholderVideo {
+        height: 240px;
+        font-size: 16px;
+    }
+
+    #placeholderVideo .subtexto {
+        font-size: 12px;
+    }
+}

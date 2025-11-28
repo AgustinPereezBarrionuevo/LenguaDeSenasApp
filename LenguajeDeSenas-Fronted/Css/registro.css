@@ -102,3 +102,96 @@ button:hover {
     from { opacity:0; transform: translateY(20px); }
     to   { opacity:1; transform: translateY(0); }
 }
+
+/* ===========================
+   📱 RESPONSIVE DESIGN
+   ===========================*/
+
+/* Tablets */
+@media (max-width: 768px) {
+    .register-container {
+        width: 90%;
+        max-width: 420px;
+        padding: 35px 30px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    body {
+        padding: 15px;
+        background-size: cover;
+        align-items: flex-start;
+        padding-top: 30px;
+    }
+
+    .register-container {
+        width: 100%;
+        max-width: 100%;
+        padding: 30px 25px;
+        margin: 10px;
+    }
+
+    h2 {
+        font-size: 22px;
+        margin-bottom: 15px;
+    }
+
+    label {
+        font-size: 13px;
+    }
+
+    input,
+    select {
+        padding: 12px;
+        margin: 6px 0 15px;
+        font-size: 16px; /* Prevents zoom on iOS */
+    }
+
+    button {
+        padding: 14px;
+        font-size: 15px;
+    }
+
+    .links {
+        margin-top: 12px;
+    }
+
+    .links a {
+        font-size: 14px;
+        margin-top: 8px;
+    }
+
+    #mensaje {
+        font-size: 14px;
+    }
+}
+
+/* Very small devices */
+@media (max-width: 360px) {
+    body {
+        padding-top: 20px;
+    }
+
+    .register-container {
+        padding: 25px 20px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    input,
+    select {
+        padding: 10px;
+    }
+
+    button {
+        padding: 12px;
+        font-size: 14px;
+    }
+}

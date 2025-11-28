@@ -128,73 +128,126 @@ table td {
 }
 
 /* ============================================================
-   📱 RESPONSIVE OFICIAL — SIN DUPLICADOS Y SIN OVERFLOW
+   📱 RESPONSIVE DESIGN - PROFESSIONAL
 ============================================================ */
-@media (max-width: 767px) {
 
+/* Menu Toggle Button */
+.menu-btn {
+    display: none;
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    z-index: 3000;
+    font-size: 28px;
+    background: var(--azul);
+    border: 2px solid var(--celeste);
+    color: var(--blanco);
+    cursor: pointer;
+    padding: 8px 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px var(--sombra);
+    transition: 0.3s;
+}
+
+.menu-btn:hover {
+    background: var(--celeste);
+    color: var(--azul);
+}
+
+/* ===========================
+   TABLETS (992px - 768px)
+   ===========================*/
+@media (max-width: 992px) {
+    .sidebar {
+        width: 200px;
+        padding: 15px;
+    }
+
+    .sidebar .logo {
+        font-size: 20px;
+        margin-bottom: 25px;
+    }
+
+    .sidebar nav a {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .content {
+        margin-left: 230px;
+        padding: 25px;
+    }
+
+    .cards {
+        flex-wrap: wrap;
+    }
+
+    .card {
+        min-width: 200px;
+        flex: 1 1 calc(50% - 20px);
+    }
+}
+
+/* ===========================
+   MOBILE (767px and below)
+   ===========================*/
+@media (max-width: 767px) {
     html, body {
         overflow-x: hidden;
         width: 100%;
     }
 
-    /* BOTÓN HAMBURGUESA */
+    /* Show menu button */
     .menu-btn {
         display: block;
-        position: fixed;
-        top: 15px;
-        left: 15px;
-        z-index: 3000;
-        font-size: 28px;
-        background: none;
-        border: none;
-        color: white;
-        cursor: pointer;
     }
 
-    /* SIDEBAR DROPDOWN */
+    /* SIDEBAR - Slide from left */
     .sidebar {
         position: fixed;
         top: 0;
-        left: 0;
-        width: 100%;
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.35s ease;
-        padding: 0;
-        border-bottom: 4px solid var(--celeste);
-        height: auto; /* evita forzar 100vh */
+        left: -100%;
+        width: 70%;
+        max-width: 280px;
+        height: 100vh;
+        z-index: 2500;
+        transition: left 0.3s ease;
+        box-shadow: 5px 0 15px rgba(0, 0, 0, 0.3);
+        overflow-y: auto;
     }
 
     .sidebar.open {
-        max-height: 500px;
+        left: 0;
     }
 
     .sidebar .logo {
         text-align: center;
-        margin: 15px 0;
+        margin: 20px 0;
         font-size: 20px;
+        padding-top: 10px;
     }
 
     .sidebar nav a {
-        font-size: 16px;
+        font-size: 15px;
         padding: 12px 15px;
     }
 
-    /* CONTENIDO */
+    /* CONTENT - Full width */
     .content {
-        margin-left: 0 !important;
-        padding: 20px 15px; /* evita overflow lateral */
-        padding-top: 85px;
+        margin-left: 0;
+        padding: 70px 20px 20px;
         width: 100%;
         box-sizing: border-box;
     }
 
     header h1 {
-        font-size: 22px;
+        font-size: 24px;
+        text-align: center;
     }
 
     .bienvenida {
-        font-size: 16px;
+        font-size: 15px;
+        text-align: center;
     }
 
     /* CARDS */
@@ -205,14 +258,109 @@ table td {
 
     .card {
         width: 100%;
-        box-sizing: border-box;
     }
 
-    /* TABLA RESPONSIVE */
+    /* TABLES */
+    .tabla-section {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
     .tabla-section table {
         display: block;
         width: 100%;
         overflow-x: auto;
         white-space: nowrap;
+    }
+
+    table th,
+    table td {
+        padding: 10px 8px;
+        font-size: 14px;
+    }
+}
+
+/* ===========================
+   SMALL MOBILE (480px)
+   ===========================*/
+@media (max-width: 480px) {
+    .menu-btn {
+        font-size: 24px;
+        padding: 6px 12px;
+        top: 12px;
+        left: 12px;
+    }
+
+    .sidebar {
+        width: 75%;
+        max-width: 250px;
+    }
+
+    .sidebar .logo {
+        font-size: 18px;
+        margin: 15px 0;
+    }
+
+    .sidebar nav a {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .content {
+        padding: 65px 15px 15px;
+    }
+
+    header h1 {
+        font-size: 20px;
+    }
+
+    .bienvenida {
+        font-size: 14px;
+    }
+
+    .card {
+        padding: 15px;
+    }
+
+    .card h3 {
+        font-size: 16px;
+    }
+
+    .card p {
+        font-size: 20px;
+    }
+
+    table th,
+    table td {
+        padding: 8px 6px;
+        font-size: 13px;
+    }
+}
+
+/* ===========================
+   VERY SMALL DEVICES (360px)
+   ===========================*/
+@media (max-width: 360px) {
+    .menu-btn {
+        font-size: 22px;
+        padding: 5px 10px;
+    }
+
+    .content {
+        padding: 60px 10px 10px;
+    }
+
+    header h1 {
+        font-size: 18px;
+    }
+
+    .card {
+        padding: 12px;
+    }
+
+    table th,
+    table td {
+        padding: 6px 4px;
+        font-size: 12px;
     }
 }

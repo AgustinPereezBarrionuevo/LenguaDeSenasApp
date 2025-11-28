@@ -197,44 +197,252 @@ h1 {
 
 
 
-/* ======= SIDEBAR DESPLEGABLE DESDE ARRIBA (MÓVILES) ======= */
+/* ============================================================
+   📱 RESPONSIVE DESIGN - PROFESSIONAL
+============================================================ */
+
+/* Menu Toggle Button */
+.menu-btn {
+  display: none;
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  z-index: 3000;
+  font-size: 28px;
+  background: var(--azul);
+  border: 2px solid var(--celeste);
+  color: var(--blanco);
+  cursor: pointer;
+  padding: 8px 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px var(--sombra);
+  transition: 0.3s;
+}
+
+.menu-btn:hover {
+  background: var(--celeste);
+  color: var(--azul);
+}
+
+/* ===========================
+   TABLETS (992px - 768px)
+   ===========================*/
+@media (max-width: 992px) {
+  .sidebar {
+    width: 200px;
+    padding: 15px;
+  }
+
+  .sidebar .logo {
+    font-size: 22px;
+    margin-bottom: 25px;
+  }
+
+  .sidebar nav a {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .content {
+    margin-left: 230px;
+    padding: 25px;
+  }
+
+  .recurso-card {
+    width: calc(50% - 20px);
+    min-width: 280px;
+  }
+}
+
+/* ===========================
+   MOBILE (767px and below)
+   ===========================*/
 @media (max-width: 767px) {
+  /* Show menu button */
+  .menu-btn {
+    display: block;
+  }
+
+  /* SIDEBAR - Slide from left */
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 70%;
+    max-width: 280px;
+    height: 100vh;
+    z-index: 2500;
+    transition: left 0.3s ease;
+    box-shadow: 5px 0 15px rgba(0, 0, 0, 0.3);
+    overflow-y: auto;
+    padding: 20px;
+  }
+
+  .sidebar.open {
+    left: 0;
+  }
+
+  .sidebar .logo {
+    font-size: 20px;
+    margin-bottom: 25px;
+    padding-top: 15px;
+  }
+
+  .sidebar nav a {
+    font-size: 15px;
+    padding: 12px;
+  }
+
+  /* CONTENT - Full width */
+  .content {
+    margin-left: 0;
+    padding: 70px 20px 20px;
+    width: 100%;
+    height: auto;
+  }
+
+  h1 {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  /* BUTTON */
+  .btn-crear {
+    width: 100%;
+    padding: 14px 20px;
+  }
+
+  /* CARDS */
+  .card-container {
+    justify-content: center;
+    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .recurso-card {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .recurso-card h3 {
+    font-size: 17px;
+  }
+
+  .recurso-card p {
+    font-size: 14px;
+  }
+
+  .card-actions {
+    flex-wrap: wrap;
+  }
+
+  .btn-ver,
+  .btn-editar {
+    flex-grow: 1;
+    padding: 10px 12px;
+  }
+
+  .btn-delete {
+    padding: 10px 12px;
+    width: 100%;
+    margin-top: 5px;
+  }
+
+  .info-msg {
+    font-size: 15px;
+    padding: 18px;
+  }
+}
+
+/* ===========================
+   SMALL MOBILE (480px)
+   ===========================*/
+@media (max-width: 480px) {
+  .menu-btn {
+    font-size: 24px;
+    padding: 6px 12px;
+    top: 12px;
+    left: 12px;
+  }
 
   .sidebar {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;           /* Ahora ocupa ancho completo */
-      height: auto;          /* ¡Ya no es 100vh! Se ajusta a su contenido */
-      max-height: 0;         /* Oculto al inicio */
-      overflow: hidden;
-      transition: max-height 0.35s ease;
-      padding: 0;            /* Se ajusta mejor */
-      box-shadow: none;
-      border-bottom: 4px solid var(--celeste);
+    width: 75%;
+    max-width: 250px;
+    padding: 15px;
   }
 
-  /* Cuando está abierto */
-  .sidebar.open {
-      max-height: 500px;     /* Ajustá según el contenido */
-      padding: 20px;
+  .sidebar .logo {
+    font-size: 18px;
+    margin-bottom: 20px;
   }
 
-  /* Ajustes internos */
   .sidebar nav a {
-      font-size: 16px;
-      padding: 10px;
+    font-size: 14px;
+    padding: 10px;
   }
 
-  .logo {
-      font-size: 20px;
-      margin-bottom: 15px;
-      text-align: center;
-  }
-
-  /* El contenido ya no corre hacia la derecha */
   .content {
-      margin-left: 0;
-      padding-top: 70px; /* opcional si querés espacio debajo del botón */
+    padding: 65px 15px 15px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  .btn-crear {
+    padding: 12px 18px;
+    font-size: 14px;
+  }
+
+  .recurso-card {
+    padding: 18px;
+  }
+
+  .recurso-card h3 {
+    font-size: 16px;
+  }
+
+  .recurso-card p {
+    font-size: 13px;
+    min-height: 35px;
+  }
+
+  .btn-ver,
+  .btn-editar,
+  .btn-delete {
+    font-size: 12px;
+    padding: 8px 10px;
+  }
+
+  .info-msg {
+    font-size: 14px;
+    padding: 15px;
+  }
+}
+
+/* ===========================
+   VERY SMALL DEVICES (360px)
+   ===========================*/
+@media (max-width: 360px) {
+  .menu-btn {
+    font-size: 22px;
+    padding: 5px 10px;
+  }
+
+  .content {
+    padding: 60px 10px 10px;
+  }
+
+  h1 {
+    font-size: 18px;
+  }
+
+  .recurso-card {
+    padding: 15px;
+  }
+
+  .recurso-card h3 {
+    font-size: 15px;
   }
 }
