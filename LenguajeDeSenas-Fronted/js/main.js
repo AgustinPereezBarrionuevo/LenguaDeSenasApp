@@ -79,3 +79,14 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 });
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  // URL de tu video en Cloudinary
+  const urlVideo = "https://player.cloudinary.com/embed/?cloud_name=dtmgalzz4&public_id=LSA_2_h7t9cc&profile=Intro_Video";
+
+  const videoElemento = document.getElementById("videoAlumno");
+  if(videoElemento){
+    videoElemento.src = urlVideo;
+  }
+});

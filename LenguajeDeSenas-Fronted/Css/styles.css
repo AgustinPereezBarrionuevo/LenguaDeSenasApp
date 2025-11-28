@@ -871,15 +871,19 @@ nav a:active {
 }
 /* Padding general de la sección */
 .alumno-section {
-  padding: 3rem 2rem; /* margen superior/inferior y a los costados */
+  display: flex;
+  justify-content: center;
+  padding: 1rem 2rem; /* margen superior/inferior y a los costados */
   background: var(--blanco);
 }
 
 /* Distribución card + video */
 .alumno-wrapper {
+
   display: flex;
   align-items: flex-start;
-  gap: 2rem;
+  margin-top: 50px;
+  gap: 15rem;
   flex-wrap: wrap;
 }
 
@@ -949,11 +953,22 @@ nav a:active {
 }
 
 /* Video */
+/* Video */
 .alumno-video {
   flex: 1;
-  min-width: 300px;
+  min-width: 600px;
+  max-width: 800px;   /* ancho máximo deseado */
+  aspect-ratio: 1 / 1; /* fuerza proporción cuadrada */
+  margin: 0 auto;     /* centra horizontalmente */
+  overflow: hidden;   /* evita que se salga del contenedor */
 }
 
+.alumno-video iframe {
+  width: 100%;
+  height: 90%;
+   border-radius: 10px; /* opcional, bordes redondeados */
+  
+}
 .recursos {
   padding: 80px 30px;
   background-image: url(../assets/background/bannerrecursos.jpg);

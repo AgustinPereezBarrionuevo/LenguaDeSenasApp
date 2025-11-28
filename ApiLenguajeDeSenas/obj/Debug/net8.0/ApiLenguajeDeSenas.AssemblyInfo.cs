@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ApiLenguajeDeSenas")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e087cec87dd75b733a8a3dfe4128f48706257d89")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1b32b84b0ea618f88052e8ac91b8495b80ccfe2d")]
 [assembly: System.Reflection.AssemblyProductAttribute("ApiLenguajeDeSenas")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ApiLenguajeDeSenas")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
