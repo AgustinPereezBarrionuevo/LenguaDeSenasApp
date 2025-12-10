@@ -11,57 +11,52 @@ namespace ApiLenguajeDeSenas
         {
             var builder = WebApplication.CreateBuilder(args);
 
-            // Define el nombre de la política CORS para usarla en la aplicación
+            // Nombre de la política CORS
             var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
 
             builder.Services.AddControllers();
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
-     
+            // Conexión a Azure SQL vía variable de entorno
             builder.Services.AddDbContext<AppDbContext>(options =>
-                options.UseSqlServer(builder.Configuration.GetConnectionString("ConexionDB")));
+                options.UseSqlServer(Environment.GetEnvironmentVariable("ConnectionStrings__DefaultConnection")));
 
+
+            // Servicios
             builder.Services.AddScoped<IUsuarioService, UsuarioService>();
             builder.Services.AddScoped<IDocenteService, DocenteService>();
             builder.Services.AddScoped<IRecursoDidacticoService, RecursoDidacticoService>();
             builder.Services.AddScoped<IRecuperacionService, RecuperacionService>();
 
-
-            // CONFIGURACIÓN DE CORS ESPECÍFICA para el desarrollo local (Live Server)
+            // CORS: localhost para pruebas + frontend en producción
             builder.Services.AddCors(options =>
             {
                 options.AddPolicy(name: MyAllowSpecificOrigins,
-                    builder =>
+                   builder =>
                     {
-                        builder.WithOrigins(
-                                "http://127.0.0.1:5500", // Live Server VS Code
-                                "http://localhost:5500")
-                               .AllowAnyHeader()
-                               .AllowAnyMethod();
+                         builder.AllowAnyOrigin()   // <--- permite cualquier origen
+                        .AllowAnyHeader()
+                         .AllowAnyMethod();
                     });
             });
 
-
-    
-
             var app = builder.Build();
 
-           
-            
-                app.UseSwagger();
-                app.UseSwaggerUI();
-            
+            // Swagger
+            app.UseSwagger();
+            app.UseSwaggerUI();
 
             app.UseHttpsRedirection();
 
-     
             app.UseCors(MyAllowSpecificOrigins);
 
             app.UseAuthorization();
 
             app.MapControllers();
 
+            var port = Environment.GetEnvironmentVariable("PORT") ?? "5000";
+            app.Urls.Add($"http://*:{port}");
             app.Run();
         }
     }
