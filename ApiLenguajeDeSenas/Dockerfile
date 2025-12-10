@@ -1,20 +1,23 @@
-# Imagen base para compilar
+# Imagen base para ejecutar la API
+FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
+WORKDIR /app
+EXPOSE 8080
+
+# Imagen para compilar
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /src
 
-# Copiar csproj y restaurar dependencias
-COPY ApiLenguajeDeSenas/ApiLenguajeDeSenas.csproj ApiLenguajeDeSenas/
-RUN dotnet restore ApiLenguajeDeSenas/ApiLenguajeDeSenas.csproj
+# Copiar TODO lo que está dentro de ApiLenguajeDeSenas
+COPY . .
 
-# Copiar todo el código
-COPY ApiLenguajeDeSenas/ ApiLenguajeDeSenas/
-WORKDIR /src/ApiLenguajeDeSenas
+# Restaurar dependencias
+RUN dotnet restore "ApiLenguajeDeSenas.csproj"
 
-# Publicar en modo release
-RUN dotnet publish -c Release -o /app/out
+# Publicar en modo Release
+RUN dotnet publish "ApiLenguajeDeSenas.csproj" -c Release -o /app/out
 
-# Imagen runtime (lo que se ejecuta)
-FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS runtime
+# Imagen final
+FROM base AS final
 WORKDIR /app
 COPY --from=build /app/out .
 
