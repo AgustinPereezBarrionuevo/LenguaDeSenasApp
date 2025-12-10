@@ -1,22 +1,21 @@
-# Etapa 1: Build
+# Imagen base para compilar
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /src
 
-# Copiamos todo el proyecto al contenedor
-COPY . .
+# Copiar csproj y restaurar dependencias
+COPY ApiLenguajeDeSenas/ApiLenguajeDeSenas.csproj ApiLenguajeDeSenas/
+RUN dotnet restore ApiLenguajeDeSenas/ApiLenguajeDeSenas.csproj
 
-# Publicamos la app en modo Release en /app/out
+# Copiar todo el código
+COPY ApiLenguajeDeSenas/ ApiLenguajeDeSenas/
+WORKDIR /src/ApiLenguajeDeSenas
+
+# Publicar en modo release
 RUN dotnet publish -c Release -o /app/out
 
-# Etapa 2: Runtime
+# Imagen runtime (lo que se ejecuta)
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS runtime
 WORKDIR /app
-
-# Copiamos desde la etapa de build
 COPY --from=build /app/out .
 
-# Exponemos el puerto que Railway usará
-EXPOSE 10000
-
-# Comando para iniciar la app
-ENTRYPOINT ["dotnet", "ApiLenguajeDeSenas.dll", "--urls", "http://0.0.0.0:10000"]
+ENTRYPOINT ["dotnet", "ApiLenguajeDeSenas.dll"]
