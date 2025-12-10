@@ -23,7 +23,7 @@ document.getElementById("formRegistro").addEventListener("submit", async (e) => 
     };
 
     try {
-        const res = await fetch("https://localhost:7061/api/usuarios", {
+        const res = await fetch("https://lsa-api.up.railway.app/api/usuarios", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

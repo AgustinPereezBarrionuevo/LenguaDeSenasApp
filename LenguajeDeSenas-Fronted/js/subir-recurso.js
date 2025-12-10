@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
             
    
             try {
-                const res = await fetch("https://localhost:7061/api/RecursosDidacticos", {
+                const res = await fetch("https://lsa-api.up.railway.app/api/RecursosDidacticos", {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify(recurso)

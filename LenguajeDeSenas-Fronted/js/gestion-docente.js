@@ -3,13 +3,13 @@
 // ==============================================
 
 export async function cargarUsuarios() {
-    const res = await fetch("https://localhost:7061/api/Usuarios");
+    const res = await fetch("https://lsa-api.up.railway.app/api/Usuarios");
     const usuarios = await res.json();
     // La función renderizarUsuarios (si existe) se ejecutaría aquí.
 }
 
 async function cargarDocentes() {
-    const res = await fetch("https://localhost:7061/api/Docentes");
+    const res = await fetch("https://lsa-api.up.railway.app/api/Docentes");
     const docentes = await res.json();
 
     const tabla = document.getElementById("tablaDocentes");
@@ -58,7 +58,7 @@ async function cargarDocentes() {
 let listaUsuarios = [];
 
 async function prepararAutocomplete() {
-    const res = await fetch("https://localhost:7061/api/Usuarios");
+    const res = await fetch("https://lsa-api.up.railway.app/api/Usuarios");
     const usuarios = await res.json();
 
     listaUsuarios = usuarios.filter(u => u.rol !== "Docente");
@@ -165,7 +165,7 @@ document.getElementById("formDocente").addEventListener("submit", async e => {
         return;
     }
 
-    const res = await fetch("https://localhost:7061/api/Docentes", {
+    const res = await fetch("https://lsa-api.up.railway.app/api/Docentes", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(nuevo)
@@ -202,7 +202,7 @@ document.getElementById("formDocente").addEventListener("submit", async e => {
 window.eliminarDocente = async function (id) {
     if (!confirm("¿Eliminar este docente? (Se degradará a Alumno)")) return;
 
-    const res = await fetch(`https://localhost:7061/api/Docentes/${id}`, {
+    const res = await fetch(`https://lsa-api.up.railway.app/api/Docentes/${id}`, {
         method: "DELETE"
     });
 

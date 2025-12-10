@@ -8,7 +8,7 @@ document.getElementById("formLogin").addEventListener("submit", async (e) => {
     mensaje.textContent = "";
 
     try {
-        const respuesta = await fetch("https://localhost:7061/api/auth/login", {
+        const respuesta = await fetch("https://lsa-api.up.railway.app/api/auth/login", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

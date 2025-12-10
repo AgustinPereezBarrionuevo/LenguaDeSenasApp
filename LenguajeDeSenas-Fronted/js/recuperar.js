@@ -7,7 +7,7 @@
             return;
         }
 
-        const response = await fetch("https://localhost:7061/api/auth/recuperar", {
+        const response = await fetch("https://lsa-api.up.railway.app/api/auth/recuperar", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ email })

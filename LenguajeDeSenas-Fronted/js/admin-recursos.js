@@ -1,4 +1,4 @@
-const API_URL = "https://localhost:7061/api";
+const API_URL = "lsa-api.up.railway.app/api";
 
 document.addEventListener("DOMContentLoaded", () => {
     cargarRecursos();

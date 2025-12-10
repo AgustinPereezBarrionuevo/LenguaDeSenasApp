@@ -1,4 +1,4 @@
-const API_URL = "https://localhost:7061/api";
+const API_URL = "https://lsa-api.up.railway.app/api";
 
 async function cargarTodosLosRecursos() {
     const contenedor = document.getElementById("listaRecursosAlumno");

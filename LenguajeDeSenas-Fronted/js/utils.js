@@ -45,7 +45,7 @@ export async function obtenerIdDocenteLogueado() {
     }  
 
     try {
-        const res = await fetch(`https://localhost:7061/api/Docentes/PorUsuario/${idUsuario}`);
+        const res = await fetch(`https://lsa-api.up.railway.app/api/Docentes/PorUsuario/${idUsuario}`);
         if (!res.ok) {
             console.error("Usuario no es un docente activo o API falló.");
             return null;

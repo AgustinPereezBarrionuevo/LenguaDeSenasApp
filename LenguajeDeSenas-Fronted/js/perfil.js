@@ -124,7 +124,7 @@ document.addEventListener("DOMContentLoaded", () => {
         };
 
         try {
-            const res = await fetch(`https://localhost:7061/api/Usuarios/${usuario.idUsuario}`, {
+            const res = await fetch(`https://lsa-api.up.railway.app/api/Usuarios/${usuario.idUsuario}`, {
                 method: "PUT",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(datosActualizar)
@@ -169,7 +169,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         try {
-            const res = await fetch(`https://localhost:7061/api/Usuarios/${usuario.idUsuario}`, {
+            const res = await fetch(`https://lsa-api.up.railway.app/api/Usuarios/${usuario.idUsuario}`, {
                 method: "PUT",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(nuevosDatos)
@@ -215,7 +215,7 @@ document.addEventListener("DOMContentLoaded", () => {
         };
 
         try {
-            const res = await fetch(`https://localhost:7061/api/Usuarios/CambiarPassword`, {
+            const res = await fetch(`https://lsa-api.up.railway.app/api/Usuarios/CambiarPassword`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(datosPassword)

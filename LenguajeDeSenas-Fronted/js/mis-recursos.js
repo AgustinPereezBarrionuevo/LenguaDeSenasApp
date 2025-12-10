@@ -1,6 +1,6 @@
 import { obtenerIdDocenteLogueado } from './utils.js';
 
-const API_URL = "https://localhost:7061/api";
+const API_URL = "https://lsa-api.up.railway.app/api";
 
 
 async function cargarMisRecursos() {
@@ -16,7 +16,7 @@ async function cargarMisRecursos() {
 
     try {
         
-        const res = await fetch(`https://localhost:7061/api/RecursosDidacticos/PorDocente/${idDocente}`);
+        const res = await fetch(`https://lsa-api.up.railway.app/api/RecursosDidacticos/PorDocente/${idDocente}`);
         if (!res.ok) {
             contenedor.innerHTML = '<p class="error-msg">Error al cargar los recursos.</p>';
             return;

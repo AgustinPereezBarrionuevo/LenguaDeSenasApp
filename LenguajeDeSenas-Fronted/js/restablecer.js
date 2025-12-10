@@ -11,7 +11,7 @@
             return;
         }
 
-        const response = await fetch("https://localhost:7061/api/auth/restablecer", {
+        const response = await fetch("https://lsa-api.up.railway.app/api/auth/restablecer", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({

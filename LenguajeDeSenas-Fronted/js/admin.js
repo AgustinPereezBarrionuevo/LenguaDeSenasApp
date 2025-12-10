@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 export async function cargarUsuarios() {
 
-    const res = await fetch("https://localhost:7061/api/Usuarios");
+    const res = await fetch("lsa-api.up.railway.app/api/Usuarios");
     const usuarios = await res.json();
 
     renderizarUsuarios(usuarios);
@@ -43,7 +43,7 @@ export async function crearUsuario() {
         rol: document.getElementById("rol").value
     };
 
-    const res = await fetch("https://localhost:7061/api/Usuarios", {
+    const res = await fetch("lsa-api.up.railway.app/api/Usuarios", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -61,13 +61,13 @@ export async function crearUsuario() {
 
 export async function cargarDashboardAdmin() {
 
-    const resUsuarios = await fetch("https://localhost:7061/api/Usuarios");
+    const resUsuarios = await fetch("lsa-api.up.railway.app/api/Usuarios");
     const usuarios = await resUsuarios.json();
 
     const totalUsuarios = usuarios.length;
     const totalDocentes = usuarios.filter(u => u.rol === "Docente").length;
 
-    const resRecursos = await fetch("https://localhost:7061/api/RecursosDidacticos");
+    const resRecursos = await fetch("lsa-api.up.railway.app/api/RecursosDidacticos");
     const recursos = await resRecursos.json();
 
     document.getElementById("countUsuarios").textContent = totalUsuarios;
@@ -79,7 +79,7 @@ window.eliminarUsuario = async function (id) {
 
     if (!confirm("¿Seguro que deseas eliminar este usuario?")) return;
 
-    const res = await fetch(`https://localhost:7061/api/Usuarios/${id}`, {
+    const res = await fetch(`lsa-api.up.railway.app/api/Usuarios/${id}`, {
         method: "DELETE"
     });
 
