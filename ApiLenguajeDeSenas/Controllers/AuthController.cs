@@ -1,4 +1,5 @@
 ﻿using ApiLenguajeDeSenas.Data;
+using ApiLenguajeDeSenas.Dtos;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ApiLenguajeDeSenas.Controllers
@@ -8,10 +9,15 @@ namespace ApiLenguajeDeSenas.Controllers
     public class AuthController : ControllerBase
     {
         private readonly AppDbContext _context;
+        private readonly IRecuperacionService _recService;
 
-        public AuthController(AppDbContext context)
+
+        public AuthController(AppDbContext context, IRecuperacionService recService)
         {
+
             _context = context;
+            _recService = recService;
+
         }
 
         [HttpPost("login")]
@@ -34,7 +40,33 @@ namespace ApiLenguajeDeSenas.Controllers
                 avatarUrl = usuario.AvatarUrl // ← ACA VA
             });
         }
+
+        [HttpPost("recuperar")]
+        public async Task<IActionResult> Recuperar([FromBody] RecuperarContrasenaRequest request)
+        {
+            if (string.IsNullOrWhiteSpace(request.Email))
+                return BadRequest("Email requerido");
+
+            var enviado = await _recService.EnviarCodigoAsync(request.Email);
+            if (!enviado) return NotFound(new { mensaje = "Email no registrado" });
+
+            return Ok(new { mensaje = "Código enviado a tu correo" });
+        }
+
+        [HttpPost("restablecer")]
+        public async Task<IActionResult> Restablecer([FromBody] RestablecerContrasenaRequest request)
+        {
+            if (string.IsNullOrWhiteSpace(request.Email) || string.IsNullOrWhiteSpace(request.NuevaContrasena))
+                return BadRequest("Datos incompletos");
+
+            var exito = await _recService.RestablecerContrasenaAsync(request);
+            if (!exito) return BadRequest(new { mensaje = "No se pudo restablecer la contraseña (código inválido o expirado)" });
+
+            return Ok(new { mensaje = "Contraseña restablecida correctamente" });
+        }
     }
+
+
 
     public class LoginRequest
     {

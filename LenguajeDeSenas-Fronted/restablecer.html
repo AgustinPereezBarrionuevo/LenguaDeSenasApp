@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restablecer contraseña</title>
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="assets/Favicon/logoLSAtransparentepequeño.PNG">
+    <link rel="stylesheet" href="Css/restablecer.css">
+</head>
+<body>
+<div class="login-container">
+    <div class="card">
+        <h2>Restablecer contraseña</h2>
+
+        <p>Se envió un código al correo asociado.</p>
+
+        <label>Código recibido</label>
+        <input type="number" id="codigo" placeholder="Código de 6 dígitos">
+
+        <label>Nueva contraseña</label>
+        <input type="password" id="nuevaPass" placeholder="Nueva contraseña">
+
+        <button onclick="restablecer()">Restablecer</button>
+      
+             <div class="links">
+                <a href="login.html">Iniciar Sesion</a>
+                <a href="index.html">Volver al inicio</a>
+            </div>
+
+
+        <p id="msg" style="margin-top:15px;color:red;"></p>
+    </div>
+</div>
+
+<script src="js/restablecer.js"></script>
+
+</body>
+</html>

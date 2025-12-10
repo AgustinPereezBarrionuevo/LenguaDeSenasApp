@@ -11,6 +11,9 @@ namespace ApiLenguajeDeSenas.Data
         public DbSet<Usuario> Usuarios { get; set; }
         public DbSet<Docente> Docentes { get; set; }
         public DbSet<RecursoDidactico> RecursosDidacticos { get; set; }
+        public DbSet<RecuperacionClave> RecuperacionClaves { get; set; }
+
+
     }
 
 }

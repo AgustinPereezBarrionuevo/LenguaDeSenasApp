@@ -25,6 +25,8 @@ namespace ApiLenguajeDeSenas
             builder.Services.AddScoped<IUsuarioService, UsuarioService>();
             builder.Services.AddScoped<IDocenteService, DocenteService>();
             builder.Services.AddScoped<IRecursoDidacticoService, RecursoDidacticoService>();
+            builder.Services.AddScoped<IRecuperacionService, RecuperacionService>();
+
 
             // CONFIGURACIÓN DE CORS ESPECÍFICA para el desarrollo local (Live Server)
             builder.Services.AddCors(options =>
