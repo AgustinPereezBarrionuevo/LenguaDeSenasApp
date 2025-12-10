@@ -18,6 +18,11 @@ namespace ApiLenguajeDeSenas
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
+            var conn = Environment.GetEnvironmentVariable("ConnectionStrings__DefaultConnection");
+            if (string.IsNullOrEmpty(conn))
+                throw new Exception("La variable de entorno ConnectionStrings__DefaultConnection no está definida");
+            builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer(conn));
+
             // Conexión a Azure SQL vía variable de entorno
             builder.Services.AddDbContext<AppDbContext>(options =>
                 options.UseSqlServer(Environment.GetEnvironmentVariable("ConnectionStrings__DefaultConnection")));
