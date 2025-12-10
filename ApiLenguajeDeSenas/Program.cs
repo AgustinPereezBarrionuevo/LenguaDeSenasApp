@@ -51,6 +51,19 @@ namespace ApiLenguajeDeSenas
 
             app.UseCors(MyAllowSpecificOrigins);
 
+            app.Use(async (context, next) =>
+            {
+                try
+                {
+                    await next();
+                }
+                catch (Exception ex)
+                {
+                    context.Response.StatusCode = 500;
+                    await context.Response.WriteAsJsonAsync(new { error = ex.Message, stackTrace = ex.StackTrace });
+                }
+            });
+
             app.UseAuthorization();
 
             app.MapControllers();
