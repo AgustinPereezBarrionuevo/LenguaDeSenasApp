@@ -24,8 +24,8 @@ namespace ApiLenguajeDeSenas.Services
         {
             return await _context.Usuarios.FindAsync(id);
         }
-        public async Task<Usuario> AddAsync(Usuario usuario)
 
+        public async Task<Usuario> AddAsync(Usuario usuario)
         {
             // Normalizar email: quitar espacios y pasar a minúsculas
             var emailNormalized = usuario.Email.Trim().ToLower();
@@ -38,11 +38,18 @@ namespace ApiLenguajeDeSenas.Services
             if (existe)
                 throw new InvalidOperationException($"El email '{usuario.Email}' ya está registrado. Debe ser único.");
 
+            // Manejar AvatarUrl: si viene vacío, asignar valor por defecto
+            if (string.IsNullOrWhiteSpace(usuario.AvatarUrl))
+            {
+                usuario.AvatarUrl = "assets/avatares/Avatar1.png"; // Puedes poner la URL que quieras
+            }
+
             // Guardar usuario
             _context.Usuarios.Add(usuario);
             await _context.SaveChangesAsync();
             return usuario;
         }
+
 
 
         public async Task<bool> UpdateAsync(Usuario usuarioActualizado)
