@@ -27,6 +27,7 @@ namespace ApiLenguaSenas.Controllers
         [HttpPost]
         public async Task<IActionResult> Add([FromBody] Usuario usuario)
         {
+            Console.WriteLine($"Recibido: {usuario.Nombre}, {usuario.Email}, {usuario.Contraseña}");
             try
             {
                 var nuevo = await _usuarioService.AddAsync(usuario);
