@@ -36,11 +36,12 @@ builder.Services.AddCors(options =>
     options.AddPolicy(name: MyAllowSpecificOrigins,
        builder =>
        {
-           builder.AllowAnyOrigin()
+           builder.WithOrigins("https://tu-frontend.vercel.app")
                   .AllowAnyHeader()
                   .AllowAnyMethod();
        });
 });
+
 
 var app = builder.Build();
 
