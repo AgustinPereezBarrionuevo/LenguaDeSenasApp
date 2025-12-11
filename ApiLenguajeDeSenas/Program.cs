@@ -18,6 +18,7 @@ if (string.IsNullOrEmpty(conn))
 {
     throw new Exception("La variable de entorno ConnectionStrings__DefaultConnection no está definida");
 }
+Console.WriteLine(conn);
 
 // Registrar DbContext solo **una vez**
 builder.Services.AddDbContext<AppDbContext>(options =>

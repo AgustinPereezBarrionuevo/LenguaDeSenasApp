@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 export async function cargarUsuarios() {
 
-    const res = await fetch("lsa-api.up.railway.app/api/Usuarios");
+    const res = await fetch("https://lsa-api.up.railway.app/api/Usuarios");
     const usuarios = await res.json();
 
     renderizarUsuarios(usuarios);
@@ -61,13 +61,13 @@ export async function crearUsuario() {
 
 export async function cargarDashboardAdmin() {
 
-    const resUsuarios = await fetch("lsa-api.up.railway.app/api/Usuarios");
+    const resUsuarios = await fetch("https://lsa-api.up.railway.app/api/Usuarios");
     const usuarios = await resUsuarios.json();
 
     const totalUsuarios = usuarios.length;
     const totalDocentes = usuarios.filter(u => u.rol === "Docente").length;
 
-    const resRecursos = await fetch("lsa-api.up.railway.app/api/RecursosDidacticos");
+    const resRecursos = await fetch("https://lsa-api.up.railway.app/api/RecursosDidacticos");
     const recursos = await resRecursos.json();
 
     document.getElementById("countUsuarios").textContent = totalUsuarios;

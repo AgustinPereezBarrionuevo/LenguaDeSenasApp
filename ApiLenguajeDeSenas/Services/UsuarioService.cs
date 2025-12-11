@@ -24,22 +24,26 @@ namespace ApiLenguajeDeSenas.Services
         {
             return await _context.Usuarios.FindAsync(id);
         }
-
         public async Task<Usuario> AddAsync(Usuario usuario)
+
         {
+            // Normalizar email: quitar espacios y pasar a minúsculas
+            var emailNormalized = usuario.Email.Trim().ToLower();
+            usuario.Email = emailNormalized;
 
+            // Verificar si ya existe en la DB
             var existe = await _context.Usuarios
-            .AnyAsync(u => u.Email == usuario.Email);
-            if (existe)
-            {
-                throw new InvalidOperationException($"El email '{usuario.Email}' ya está registrado. Debe ser único.");
-            }
-            usuario.Email = usuario.Email.ToLower();
+                .AnyAsync(u => u.Email.ToLower() == emailNormalized);
 
+            if (existe)
+                throw new InvalidOperationException($"El email '{usuario.Email}' ya está registrado. Debe ser único.");
+
+            // Guardar usuario
             _context.Usuarios.Add(usuario);
             await _context.SaveChangesAsync();
             return usuario;
         }
+
 
         public async Task<bool> UpdateAsync(Usuario usuarioActualizado)
         {

@@ -22,13 +22,31 @@ namespace ApiLenguaSenas.Controllers
             var usuarios = await _usuarioService.GetAllAsync();
             return Ok(usuarios);
         }
-
         [HttpPost]
         public async Task<IActionResult> Add([FromBody] Usuario usuario)
         {
-            var nuevo = await _usuarioService.AddAsync(usuario);
-            return CreatedAtAction(nameof(GetAll), new { id = nuevo.IdUsuario }, nuevo);
+            if (!ModelState.IsValid)
+                return BadRequest("Datos inválidos");
+
+            try
+            {
+                // Normaliza email antes de enviarlo al service
+                usuario.Email = usuario.Email.Trim().ToLower();
+
+                var nuevo = await _usuarioService.AddAsync(usuario);
+                return CreatedAtAction(nameof(GetAll), new { id = nuevo.IdUsuario }, nuevo);
+            }
+            catch (InvalidOperationException ex)
+            {
+                // Email duplicado
+                return BadRequest(new { mensaje = ex.Message });
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { mensaje = "Error interno del servidor", detalle = ex.Message });
+            }
         }
+
 
         [HttpPut("{id}")]
         public async Task<IActionResult> Update(int id, [FromBody] UsuarioUpdateDto dto)

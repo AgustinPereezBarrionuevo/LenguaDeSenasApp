@@ -31,8 +31,9 @@ document.getElementById("formRegistro").addEventListener("submit", async (e) => 
             body: JSON.stringify(nuevoUsuario)
         });
 
-        if (!res.ok) {
-            mensaje.textContent = "Error al registrar usuario. Email ya existente.";
+       if (!res.ok) {
+            const data = await res.json();   // <-- aquí recibes { mensaje: "...email ya registrado..." }
+            mensaje.textContent = data.mensaje || "Error al registrar usuario.";
             mensaje.className = "error";
             return;
         }
