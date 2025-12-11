@@ -79,7 +79,7 @@ window.eliminarUsuario = async function (id) {
 
     if (!confirm("¿Seguro que deseas eliminar este usuario?")) return;
 
-    const res = await fetch(`lsa-api.up.railway.app/api/Usuarios/${id}`, {
+    const res = await fetch(`https://lsa-api.up.railway.app/api/Usuarios/${id}`, {
         method: "DELETE"
     });
 
