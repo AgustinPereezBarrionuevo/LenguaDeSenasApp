@@ -36,7 +36,7 @@ builder.Services.AddCors(options =>
     options.AddPolicy(name: MyAllowSpecificOrigins,
        builder =>
        {
-           builder.WithOrigins("https://tu-frontend.vercel.app")
+           builder.WithOrigins("https://lengua-de-senas-app.vercel.app")
                   .AllowAnyHeader()
                   .AllowAnyMethod();
        });
