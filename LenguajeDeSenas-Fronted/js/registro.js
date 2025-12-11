@@ -15,12 +15,12 @@ document.getElementById("formRegistro").addEventListener("submit", async (e) => 
         return;
     }
 
-    const nuevoUsuario = {
-        nombre,
-        email,
-        contraseña,
-        rol
-    };
+            const nuevoUsuario = {
+            Nombre: nombre,
+            Email: email,
+            Contraseña: contraseña,
+            Rol: rol
+        };
 
     try {
         const res = await fetch("https://lsa-api.up.railway.app/api/usuarios", {
