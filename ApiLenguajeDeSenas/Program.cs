@@ -34,11 +34,14 @@ builder.Services.AddScoped<IRecuperacionService, RecuperacionService>();
 builder.Services.AddCors(options =>
 {
     options.AddPolicy(name: MyAllowSpecificOrigins,
-       builder =>
+       corsBuilder =>
        {
-           builder.WithOrigins("https://lengua-de-senas-app.vercel.app")
-                  .AllowAnyHeader()
-                  .AllowAnyMethod();
+           corsBuilder.WithOrigins(
+               "https://lengua-de-senas-app.vercel.app",
+               "http://localhost:5500"
+           )
+           .AllowAnyHeader()
+           .AllowAnyMethod();
        });
 });
 
