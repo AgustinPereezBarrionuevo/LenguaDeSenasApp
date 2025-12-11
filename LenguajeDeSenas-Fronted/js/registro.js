@@ -32,8 +32,8 @@ document.getElementById("formRegistro").addEventListener("submit", async (e) => 
         });
 
        if (!res.ok) {
-            const data = await res.json();   // <-- aquí recibes { mensaje: "...email ya registrado..." }
-            mensaje.textContent = data.mensaje || "Error al registrar usuario.";
+            const errorData = await res.json();
+            mensaje.textContent = errorData.mensaje || "Error al registrar usuario.";
             mensaje.className = "error";
             return;
         }
