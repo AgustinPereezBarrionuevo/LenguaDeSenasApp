@@ -277,6 +277,20 @@ function resetTurn() {
   lockBoard = false;
 }
 
+function reiniciarJuego() {
+    stopTimer();
+    timerEl.textContent = "00:00";
+    attempts = 0;
+    matches = 0;
+    attemptsEl.textContent = 0;
+    matchesEl.textContent = 0;
+
+    totalPairs = parseInt(document.getElementById('level').value,10);
+    buildBoard();
+}
+
+
+
 
 
 function showAllTemporary(duration = 2000) {
@@ -324,19 +338,7 @@ async function finishGame(){
       Tiempo: <strong>${formatTime(elapsed)}</strong>`;
 
     // Mostrar modal
-    document.getElementById("finishModal").classList.remove("modal-hidden");
-}
-
-function reiniciarJuego() {
-    stopTimer();
-    timerEl.textContent = "00:00";
-    attempts = 0;
-    matches = 0;
-    attemptsEl.textContent = 0;
-    matchesEl.textContent = 0;
-
-    totalPairs = parseInt(document.getElementById('level').value,10);
-    buildBoard();
+     mostrarModalFin(elapsed, attempts);
 }
 
 
@@ -357,3 +359,24 @@ document.getElementById('show-all').addEventListener('click', ()=> showAllTempor
 // iniciar con el valor por defecto
 totalPairs = parseInt(document.getElementById('level').value,10);
 buildBoard();
+
+
+// Seleccionamos los elementos del modal
+const finishModal = document.getElementById("finishModal");
+const finishStats = document.getElementById("finishStats");
+const finishRestartBtn = document.getElementById("finishRestartBtn");
+
+// Función para mostrar el modal al terminar el juego
+function mostrarModalFin(elapsed, attempts) {
+    finishStats.innerHTML = `
+      Terminaste en <strong>${attempts}</strong> intentos.<br>
+      Tiempo: <strong>${formatTime(elapsed)}</strong>
+    `;
+    finishModal.classList.remove("modal-hidden");
+}
+
+// Botón de reinicio dentro del modal
+finishRestartBtn.addEventListener("click", () => {
+    finishModal.classList.add("modal-hidden"); // ocultar modal
+    reiniciarJuego(); // reiniciar juego
+});

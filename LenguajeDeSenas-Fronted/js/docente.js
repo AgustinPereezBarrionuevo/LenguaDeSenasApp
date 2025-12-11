@@ -13,8 +13,9 @@ async function cargarMisRecursos() {
 
     tablaBody.innerHTML = '<tr><td colspan="4">Cargando recursos...</td></tr>';
 
+
     try {
-        const res = await fetch(`lsa-api.up.railway.app/RecursosDidacticos/PorDocente/${idDocente}`);
+        const res = await fetch(`https://lsa-api.up.railway.app/api/RecursosDidacticos/PorDocente/${idDocente}`);
 
         if (!res.ok) {
             tablaBody.innerHTML = '<tr><td colspan="4">No se pudieron cargar los recursos.</td></tr>';
