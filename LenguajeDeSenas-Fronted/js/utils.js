@@ -110,3 +110,8 @@ export function actividadYaCompletada(alumnoId, actividadId) {
 
     return progreso[actividadId]?.completada === true;
 }
+
+export function inicializarProgreso(alumnoId) {
+    const claveProgreso = `progresoLSA_${alumnoId}`;
+    localStorage.setItem(claveProgreso, JSON.stringify({}));
+}

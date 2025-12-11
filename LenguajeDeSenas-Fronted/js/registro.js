@@ -1,3 +1,5 @@
+import {inicializarProgreso } from "./utils.js";
+
 document.getElementById("formRegistro").addEventListener("submit", async (e) => {
     e.preventDefault();
 
@@ -38,12 +40,16 @@ document.getElementById("formRegistro").addEventListener("submit", async (e) => 
             return;
         }
 
-        mensaje.textContent = "Registro exitoso. Redirigiendo...";
-        mensaje.className = "exito";
+            if (res.ok) {
+            const usuario = await res.json();
 
-        setTimeout(() => {
-            window.location.href = "login.html";
-        }, 1000);
+            // Inicializamos el progreso del alumno recién creado
+            inicializarProgreso(usuario.idUsuario);
+
+            mensaje.textContent = "Registro exitoso. Redirigiendo...";
+            mensaje.className = "exito";
+            setTimeout(() => window.location.href = "login.html", 1000);
+        }
 
     } catch (error) {
         mensaje.textContent = "Error al conectar con el servidor.";
