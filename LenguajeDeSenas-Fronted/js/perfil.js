@@ -180,7 +180,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 usuario.email = nuevosDatos.Email;
                 localStorage.setItem("usuario", JSON.stringify(usuario));
                 document.getElementById("nombreUsuario").textContent = nuevosDatos.Nombre;
-                document.getElementById("emailUsuario").textContent = nuevosDatos.Email;
+                document.getElementById("emailUsuarioDisplay").textContent = nuevosDatos.Email;
 
                 alert("Perfil actualizado correctamente.");
                 modalPerfil.style.display = "none";
